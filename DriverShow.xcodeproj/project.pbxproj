@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */; };
+		23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */; };
+		23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36F01D6AC19A00B4FDCE /* HomeViewController.m */; };
+		23CD36F51D6AC5EE00B4FDCE /* WYCAdvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36F41D6AC5EE00B4FDCE /* WYCAdvert.m */; };
+		23CD36FC1D6ACEAC00B4FDCE /* HeadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36FB1D6ACEAC00B4FDCE /* HeadScrollView.m */; };
+		23CD37021D6AD06300B4FDCE /* car1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36FE1D6AD06300B4FDCE /* car1.jpg */; };
+		23CD37031D6AD06300B4FDCE /* car2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36FF1D6AD06300B4FDCE /* car2.jpg */; };
+		23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD37001D6AD06300B4FDCE /* car3.jpg */; };
+		23CD37051D6AD06300B4FDCE /* car4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD37011D6AD06300B4FDCE /* car4.jpg */; };
+		4DC71D818DE2F72D33994240 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD84C5B5A41542FC9B901BE1 /* libPods.a */; };
+		981CEDB01D69D400000EC30D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDAF1D69D400000EC30D /* main.m */; };
+		981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDB21D69D400000EC30D /* AppDelegate.m */; };
+		981CEDB61D69D400000EC30D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDB51D69D400000EC30D /* ViewController.m */; };
+		981CEDB91D69D400000EC30D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDB71D69D400000EC30D /* Main.storyboard */; };
+		981CEDBB1D69D400000EC30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDBA1D69D400000EC30D /* Assets.xcassets */; };
+		981CEDBE1D69D400000EC30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */; };
+		981CEDC91D69D400000EC30D /* DriverShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDC81D69D400000EC30D /* DriverShowTests.m */; };
+		981CEDD41D69D400000EC30D /* DriverShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDD31D69D400000EC30D /* DriverShowUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		981CEDC51D69D400000EC30D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 981CEDA31D69D400000EC30D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 981CEDAA1D69D400000EC30D;
+			remoteInfo = DriverShow;
+		};
+		981CEDD01D69D400000EC30D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 981CEDA31D69D400000EC30D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 981CEDAA1D69D400000EC30D;
+			remoteInfo = DriverShow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DriverMain.storyboard; sourceTree = "<group>"; };
+		23CD36EC1D6AC06800B4FDCE /* DriverMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverMainViewController.h; sourceTree = "<group>"; };
+		23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverMainViewController.m; sourceTree = "<group>"; };
+		23CD36EF1D6AC19A00B4FDCE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		23CD36F01D6AC19A00B4FDCE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		23CD36F31D6AC5EE00B4FDCE /* WYCAdvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYCAdvert.h; sourceTree = "<group>"; };
+		23CD36F41D6AC5EE00B4FDCE /* WYCAdvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYCAdvert.m; sourceTree = "<group>"; };
+		23CD36FA1D6ACEAC00B4FDCE /* HeadScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadScrollView.h; sourceTree = "<group>"; };
+		23CD36FB1D6ACEAC00B4FDCE /* HeadScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadScrollView.m; sourceTree = "<group>"; };
+		23CD36FE1D6AD06300B4FDCE /* car1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car1.jpg; sourceTree = "<group>"; };
+		23CD36FF1D6AD06300B4FDCE /* car2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car2.jpg; sourceTree = "<group>"; };
+		23CD37001D6AD06300B4FDCE /* car3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car3.jpg; sourceTree = "<group>"; };
+		23CD37011D6AD06300B4FDCE /* car4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car4.jpg; sourceTree = "<group>"; };
+		981CEDAB1D69D400000EC30D /* DriverShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriverShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		981CEDAF1D69D400000EC30D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		981CEDB11D69D400000EC30D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		981CEDB21D69D400000EC30D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		981CEDB41D69D400000EC30D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		981CEDB51D69D400000EC30D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		981CEDB81D69D400000EC30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		981CEDBA1D69D400000EC30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		981CEDBD1D69D400000EC30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		981CEDBF1D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		981CEDC41D69D400000EC30D /* DriverShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		981CEDC81D69D400000EC30D /* DriverShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverShowTests.m; sourceTree = "<group>"; };
+		981CEDCA1D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		981CEDCF1D69D400000EC30D /* DriverShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		981CEDD31D69D400000EC30D /* DriverShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverShowUITests.m; sourceTree = "<group>"; };
+		981CEDD51D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD84C5B5A41542FC9B901BE1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFA29BE111346A81E75F0F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DCC2F8314A0FF6F1A478B5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		981CEDA81D69D400000EC30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC71D818DE2F72D33994240 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981CEDC11D69D400000EC30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981CEDCC1D69D400000EC30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23CD36E91D6AC01B00B4FDCE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23CD36F61D6ACE0700B4FDCE /* HeadScroll */,
+				23CD36F21D6AC5AC00B4FDCE /* SetAdvert */,
+				23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */,
+				23CD36EC1D6AC06800B4FDCE /* DriverMainViewController.h */,
+				23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */,
+				23CD36EF1D6AC19A00B4FDCE /* HomeViewController.h */,
+				23CD36F01D6AC19A00B4FDCE /* HomeViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		23CD36F21D6AC5AC00B4FDCE /* SetAdvert */ = {
+			isa = PBXGroup;
+			children = (
+				23CD36F31D6AC5EE00B4FDCE /* WYCAdvert.h */,
+				23CD36F41D6AC5EE00B4FDCE /* WYCAdvert.m */,
+			);
+			name = SetAdvert;
+			sourceTree = "<group>";
+		};
+		23CD36F61D6ACE0700B4FDCE /* HeadScroll */ = {
+			isa = PBXGroup;
+			children = (
+				23CD36FD1D6AD06300B4FDCE /* ads */,
+				23CD36FA1D6ACEAC00B4FDCE /* HeadScrollView.h */,
+				23CD36FB1D6ACEAC00B4FDCE /* HeadScrollView.m */,
+			);
+			name = HeadScroll;
+			sourceTree = "<group>";
+		};
+		23CD36FD1D6AD06300B4FDCE /* ads */ = {
+			isa = PBXGroup;
+			children = (
+				23CD36FE1D6AD06300B4FDCE /* car1.jpg */,
+				23CD36FF1D6AD06300B4FDCE /* car2.jpg */,
+				23CD37001D6AD06300B4FDCE /* car3.jpg */,
+				23CD37011D6AD06300B4FDCE /* car4.jpg */,
+			);
+			path = ads;
+			sourceTree = "<group>";
+		};
+		981CEDA21D69D400000EC30D = {
+			isa = PBXGroup;
+			children = (
+				981CEDAD1D69D400000EC30D /* DriverShow */,
+				981CEDC71D69D400000EC30D /* DriverShowTests */,
+				981CEDD21D69D400000EC30D /* DriverShowUITests */,
+				981CEDAC1D69D400000EC30D /* Products */,
+				BBEBA7271B07B405EC245734 /* Pods */,
+				F7461A9B3D2C0F499A981FB9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		981CEDAC1D69D400000EC30D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				981CEDAB1D69D400000EC30D /* DriverShow.app */,
+				981CEDC41D69D400000EC30D /* DriverShowTests.xctest */,
+				981CEDCF1D69D400000EC30D /* DriverShowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		981CEDAD1D69D400000EC30D /* DriverShow */ = {
+			isa = PBXGroup;
+			children = (
+				23CD36E91D6AC01B00B4FDCE /* Main */,
+				981CEDB11D69D400000EC30D /* AppDelegate.h */,
+				981CEDB21D69D400000EC30D /* AppDelegate.m */,
+				981CEDB41D69D400000EC30D /* ViewController.h */,
+				981CEDB51D69D400000EC30D /* ViewController.m */,
+				981CEDB71D69D400000EC30D /* Main.storyboard */,
+				981CEDBA1D69D400000EC30D /* Assets.xcassets */,
+				981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */,
+				981CEDBF1D69D400000EC30D /* Info.plist */,
+				981CEDAE1D69D400000EC30D /* Supporting Files */,
+			);
+			path = DriverShow;
+			sourceTree = "<group>";
+		};
+		981CEDAE1D69D400000EC30D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				981CEDAF1D69D400000EC30D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		981CEDC71D69D400000EC30D /* DriverShowTests */ = {
+			isa = PBXGroup;
+			children = (
+				981CEDC81D69D400000EC30D /* DriverShowTests.m */,
+				981CEDCA1D69D400000EC30D /* Info.plist */,
+			);
+			path = DriverShowTests;
+			sourceTree = "<group>";
+		};
+		981CEDD21D69D400000EC30D /* DriverShowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				981CEDD31D69D400000EC30D /* DriverShowUITests.m */,
+				981CEDD51D69D400000EC30D /* Info.plist */,
+			);
+			path = DriverShowUITests;
+			sourceTree = "<group>";
+		};
+		BBEBA7271B07B405EC245734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAFA29BE111346A81E75F0F0 /* Pods.debug.xcconfig */,
+				DCC2F8314A0FF6F1A478B5F3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7461A9B3D2C0F499A981FB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD84C5B5A41542FC9B901BE1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		981CEDAA1D69D400000EC30D /* DriverShow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981CEDD81D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShow" */;
+			buildPhases = (
+				C1DE11A40A1C9F902D02CB90 /* Check Pods Manifest.lock */,
+				981CEDA71D69D400000EC30D /* Sources */,
+				981CEDA81D69D400000EC30D /* Frameworks */,
+				981CEDA91D69D400000EC30D /* Resources */,
+				32383083AE09F91B187C4B03 /* Embed Pods Frameworks */,
+				17CB45A84B916034B2689F9A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriverShow;
+			productName = DriverShow;
+			productReference = 981CEDAB1D69D400000EC30D /* DriverShow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		981CEDC31D69D400000EC30D /* DriverShowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981CEDDB1D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShowTests" */;
+			buildPhases = (
+				981CEDC01D69D400000EC30D /* Sources */,
+				981CEDC11D69D400000EC30D /* Frameworks */,
+				981CEDC21D69D400000EC30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				981CEDC61D69D400000EC30D /* PBXTargetDependency */,
+			);
+			name = DriverShowTests;
+			productName = DriverShowTests;
+			productReference = 981CEDC41D69D400000EC30D /* DriverShowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		981CEDCE1D69D400000EC30D /* DriverShowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981CEDDE1D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShowUITests" */;
+			buildPhases = (
+				981CEDCB1D69D400000EC30D /* Sources */,
+				981CEDCC1D69D400000EC30D /* Frameworks */,
+				981CEDCD1D69D400000EC30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				981CEDD11D69D400000EC30D /* PBXTargetDependency */,
+			);
+			name = DriverShowUITests;
+			productName = DriverShowUITests;
+			productReference = 981CEDCF1D69D400000EC30D /* DriverShowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		981CEDA31D69D400000EC30D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "魏云超";
+				TargetAttributes = {
+					981CEDAA1D69D400000EC30D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HV5ET565XY;
+					};
+					981CEDC31D69D400000EC30D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 981CEDAA1D69D400000EC30D;
+					};
+					981CEDCE1D69D400000EC30D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 981CEDAA1D69D400000EC30D;
+					};
+				};
+			};
+			buildConfigurationList = 981CEDA61D69D400000EC30D /* Build configuration list for PBXProject "DriverShow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 981CEDA21D69D400000EC30D;
+			productRefGroup = 981CEDAC1D69D400000EC30D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				981CEDAA1D69D400000EC30D /* DriverShow */,
+				981CEDC31D69D400000EC30D /* DriverShowTests */,
+				981CEDCE1D69D400000EC30D /* DriverShowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		981CEDA91D69D400000EC30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981CEDBE1D69D400000EC30D /* LaunchScreen.storyboard in Resources */,
+				23CD37051D6AD06300B4FDCE /* car4.jpg in Resources */,
+				23CD37031D6AD06300B4FDCE /* car2.jpg in Resources */,
+				23CD37021D6AD06300B4FDCE /* car1.jpg in Resources */,
+				23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */,
+				981CEDBB1D69D400000EC30D /* Assets.xcassets in Resources */,
+				981CEDB91D69D400000EC30D /* Main.storyboard in Resources */,
+				23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981CEDC21D69D400000EC30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981CEDCD1D69D400000EC30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17CB45A84B916034B2689F9A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32383083AE09F91B187C4B03 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1DE11A40A1C9F902D02CB90 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		981CEDA71D69D400000EC30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981CEDB61D69D400000EC30D /* ViewController.m in Sources */,
+				23CD36FC1D6ACEAC00B4FDCE /* HeadScrollView.m in Sources */,
+				23CD36F51D6AC5EE00B4FDCE /* WYCAdvert.m in Sources */,
+				23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */,
+				981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */,
+				23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */,
+				981CEDB01D69D400000EC30D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981CEDC01D69D400000EC30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981CEDC91D69D400000EC30D /* DriverShowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981CEDCB1D69D400000EC30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981CEDD41D69D400000EC30D /* DriverShowUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		981CEDC61D69D400000EC30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 981CEDAA1D69D400000EC30D /* DriverShow */;
+			targetProxy = 981CEDC51D69D400000EC30D /* PBXContainerItemProxy */;
+		};
+		981CEDD11D69D400000EC30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 981CEDAA1D69D400000EC30D /* DriverShow */;
+			targetProxy = 981CEDD01D69D400000EC30D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		981CEDB71D69D400000EC30D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				981CEDB81D69D400000EC30D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				981CEDBD1D69D400000EC30D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		981CEDD61D69D400000EC30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		981CEDD71D69D400000EC30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		981CEDD91D69D400000EC30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFA29BE111346A81E75F0F0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = DriverShow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		981CEDDA1D69D400000EC30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCC2F8314A0FF6F1A478B5F3 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = DriverShow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		981CEDDC1D69D400000EC30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DriverShowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriverShow.app/DriverShow";
+			};
+			name = Debug;
+		};
+		981CEDDD1D69D400000EC30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DriverShowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriverShow.app/DriverShow";
+			};
+			name = Release;
+		};
+		981CEDDF1D69D400000EC30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DriverShowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DriverShow;
+			};
+			name = Debug;
+		};
+		981CEDE01D69D400000EC30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DriverShowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DriverShow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		981CEDA61D69D400000EC30D /* Build configuration list for PBXProject "DriverShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981CEDD61D69D400000EC30D /* Debug */,
+				981CEDD71D69D400000EC30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981CEDD81D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981CEDD91D69D400000EC30D /* Debug */,
+				981CEDDA1D69D400000EC30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981CEDDB1D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981CEDDC1D69D400000EC30D /* Debug */,
+				981CEDDD1D69D400000EC30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981CEDDE1D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981CEDDF1D69D400000EC30D /* Debug */,
+				981CEDE01D69D400000EC30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 981CEDA31D69D400000EC30D /* Project object */;
+}
