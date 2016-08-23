@@ -22,8 +22,8 @@
         NSURL *baseURL = [NSURL URLWithString:@"http://muxinzuche.com/"];
         
         tools.securityPolicy.allowInvalidCertificates = YES;
-        [tools.responseSerializer setAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
-//        tools.responseSerializer = [AFHTTPResponseSerializer serializer];
+//        [tools.responseSerializer setAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+        tools.responseSerializer = [AFHTTPResponseSerializer serializer];
         
         tools = [[self alloc]initWithBaseURL:baseURL sessionConfiguration:config];
     });

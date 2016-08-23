@@ -26,6 +26,8 @@
 		981CEDBE1D69D400000EC30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */; };
 		981CEDC91D69D400000EC30D /* DriverShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDC81D69D400000EC30D /* DriverShowTests.m */; };
 		981CEDD41D69D400000EC30D /* DriverShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDD31D69D400000EC30D /* DriverShowUITests.m */; };
+		98BE806D1D6C8E6100CB7611 /* CenterDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BE806C1D6C8E6100CB7611 /* CenterDetail.storyboard */; };
+		98BE80701D6C8E8B00CB7611 /* CenterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BE806F1D6C8E8B00CB7611 /* CenterDetailViewController.m */; };
 		E2A8687F72378AB2BD0B9E36 /* libPods-DriverShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051C66D373B0AD2B6EA67F /* libPods-DriverShow.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,9 @@
 		981CEDCF1D69D400000EC30D /* DriverShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		981CEDD31D69D400000EC30D /* DriverShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverShowUITests.m; sourceTree = "<group>"; };
 		981CEDD51D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98BE806C1D6C8E6100CB7611 /* CenterDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CenterDetail.storyboard; sourceTree = "<group>"; };
+		98BE806E1D6C8E8B00CB7611 /* CenterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterDetailViewController.h; sourceTree = "<group>"; };
+		98BE806F1D6C8E8B00CB7611 /* CenterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterDetailViewController.m; sourceTree = "<group>"; };
 		B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +205,7 @@
 		981CEDAD1D69D400000EC30D /* DriverShow */ = {
 			isa = PBXGroup;
 			children = (
+				98BE806B1D6C8E4B00CB7611 /* CenterDetail */,
 				237986931D6BE0A100509B39 /* Lib */,
 				23CD36E91D6AC01B00B4FDCE /* Main */,
 				981CEDB11D69D400000EC30D /* AppDelegate.h */,
@@ -239,6 +245,16 @@
 				981CEDD51D69D400000EC30D /* Info.plist */,
 			);
 			path = DriverShowUITests;
+			sourceTree = "<group>";
+		};
+		98BE806B1D6C8E4B00CB7611 /* CenterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				98BE806C1D6C8E6100CB7611 /* CenterDetail.storyboard */,
+				98BE806E1D6C8E8B00CB7611 /* CenterDetailViewController.h */,
+				98BE806F1D6C8E8B00CB7611 /* CenterDetailViewController.m */,
+			);
+			name = CenterDetail;
 			sourceTree = "<group>";
 		};
 		9B75CB9BA4223AC4DAAB29F9 /* Frameworks */ = {
@@ -362,6 +378,7 @@
 				23CD37021D6AD06300B4FDCE /* car1.jpg in Resources */,
 				23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */,
 				981CEDBB1D69D400000EC30D /* Assets.xcassets in Resources */,
+				98BE806D1D6C8E6100CB7611 /* CenterDetail.storyboard in Resources */,
 				981CEDB91D69D400000EC30D /* Main.storyboard in Resources */,
 				23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */,
 			);
@@ -444,6 +461,7 @@
 				981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */,
 				237986A21D6C621000509B39 /* NetWorkTools.m in Sources */,
 				23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */,
+				98BE80701D6C8E8B00CB7611 /* CenterDetailViewController.m in Sources */,
 				981CEDB01D69D400000EC30D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

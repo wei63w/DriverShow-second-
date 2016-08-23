@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HeadScrollView.h"
 #import "NetWorkTools.h"
+#import "CenterDetailViewController.h"
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 
 
@@ -52,10 +53,12 @@
 
 
 -(void)getNewWork{
-    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveDataaaabbbccc" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [[NetWorkTools sharedNetworkTools]POST:@"API/Car/receiveData" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"请求中");
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"成功");
+        
+        
+        NSLog(@"成功%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"失败:%@",error);
     }];
@@ -83,16 +86,45 @@
 
 
 #pragma mark - HeadScrollViewDelegate -
-#warning 如果不想实现直接去掉此方法即可
+// 如果不想实现直接去掉此方法即可
 - (void)ScrollViewDidClickAtAnyImageView:(UIImageView *)imageView {
     
     NSLog(@"%ld --  %@",imageView.tag, imageView.image);
+}
+
+//centerView Click
+- (IBAction)centerBtnClick:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CenterDetail" bundle:nil];
+    CenterDetailViewController *vc = sb.instantiateInitialViewController;
+    
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
+
+- (IBAction)leftBtnClick:(id)sender {
+    
+    
+}
+
+
+- (IBAction)rightBtnClick:(id)sender {
+}
+
+
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
 
 /*
 #pragma mark - Navigation
