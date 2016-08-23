@@ -135,12 +135,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="VIo-Rf-na6">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="pP3-Em-bzZ"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="3zz-8D-HN8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="LiftItem" destination="pP3-Em-bzZ" id="gCe-T6-E3V"/>
                         <outlet property="NavBar" destination="VIo-Rf-na6" id="QBJ-se-bac"/>
-                        <outlet property="RightItem" destination="3zz-8D-HN8" id="Fo2-RM-QDb"/>
                         <outlet property="centerContent" destination="POM-Cj-1hF" id="boJ-RG-pdB"/>
                         <outlet property="leftFotter" destination="BGX-uH-Uhj" id="Opz-mJ-L1C"/>
                         <outlet property="rightFotter" destination="iLj-zL-hBw" id="l0Z-2x-Pm8"/>

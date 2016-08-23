@@ -43,28 +43,24 @@
     
     self.navigationItem.leftBarButtonItem.title = @"北京";
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-    
-    self.navigationItem.rightBarButtonItem.title = @"登录";
-    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
-    
-    
-   
+
     
     [self createInfiniteScrollView];
+    
+    [self getNewWork];
 }
 
--(void)addTextWithStr:(NSString *)str andTarget:(UIView *)target{
-    UILabel *lab = [[UILabel alloc]init];
-    
-    [lab setFrame:CGRectMake(target.frame.size.width / 4  , target.frame.size.height / 2 , 100, 30)];
 
-    
-    lab.text = str;
-    lab.textAlignment = NSTextAlignmentCenter;
-    lab.font = [UIFont systemFontOfSize:20];
-    lab.textColor = [UIColor whiteColor];
-    [target addSubview:lab];
+-(void)getNewWork{
+    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveDataaaabbbccc" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"请求中");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"成功");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"失败:%@",error);
+    }];
 }
+
 
 
 //创建顶部的轮播图

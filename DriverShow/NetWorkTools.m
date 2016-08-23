@@ -15,9 +15,16 @@
 +(instancetype)sharedNetworkTools{
     static NetWorkTools *tools;
     static dispatch_once_t onceToken;
+    
+    
     dispatch_once(&onceToken, ^{
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        NSURL *baseURL = [NSURL URLWithString:@"http://127.0.0.1/"];
+        NSURL *baseURL = [NSURL URLWithString:@"http://muxinzuche.com/"];
+        
+        tools.securityPolicy.allowInvalidCertificates = YES;
+        [tools.responseSerializer setAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+//        tools.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
         tools = [[self alloc]initWithBaseURL:baseURL sessionConfiguration:config];
     });
     return tools;
