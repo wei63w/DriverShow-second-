@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HeadScrollView.h"
-
+#import "NetWorkTools.h"
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 
 
