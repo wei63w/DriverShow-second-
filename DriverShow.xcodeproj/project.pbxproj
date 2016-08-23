@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237986A21D6C621000509B39 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2379869F1D6C621000509B39 /* NetWorkTools.m */; };
+		237986A31D6C621000509B39 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 237986A11D6C621000509B39 /* NSString+Path.m */; };
 		23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */; };
 		23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */; };
 		23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36F01D6AC19A00B4FDCE /* HomeViewController.m */; };
@@ -16,7 +18,6 @@
 		23CD37031D6AD06300B4FDCE /* car2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36FF1D6AD06300B4FDCE /* car2.jpg */; };
 		23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD37001D6AD06300B4FDCE /* car3.jpg */; };
 		23CD37051D6AD06300B4FDCE /* car4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD37011D6AD06300B4FDCE /* car4.jpg */; };
-		4DC71D818DE2F72D33994240 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD84C5B5A41542FC9B901BE1 /* libPods.a */; };
 		981CEDB01D69D400000EC30D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDAF1D69D400000EC30D /* main.m */; };
 		981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDB21D69D400000EC30D /* AppDelegate.m */; };
 		981CEDB61D69D400000EC30D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDB51D69D400000EC30D /* ViewController.m */; };
@@ -25,6 +26,7 @@
 		981CEDBE1D69D400000EC30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */; };
 		981CEDC91D69D400000EC30D /* DriverShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDC81D69D400000EC30D /* DriverShowTests.m */; };
 		981CEDD41D69D400000EC30D /* DriverShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDD31D69D400000EC30D /* DriverShowUITests.m */; };
+		E2A8687F72378AB2BD0B9E36 /* libPods-DriverShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051C66D373B0AD2B6EA67F /* libPods-DriverShow.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2151CBF06872B9D97D5323 /* Pods-DriverShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow.debug.xcconfig"; sourceTree = "<group>"; };
+		2379869E1D6C621000509B39 /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTools.h; sourceTree = "<group>"; };
+		2379869F1D6C621000509B39 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
+		237986A01D6C621000509B39 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
+		237986A11D6C621000509B39 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
 		23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DriverMain.storyboard; sourceTree = "<group>"; };
 		23CD36EC1D6AC06800B4FDCE /* DriverMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverMainViewController.h; sourceTree = "<group>"; };
 		23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverMainViewController.m; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		23CD36FF1D6AD06300B4FDCE /* car2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car2.jpg; sourceTree = "<group>"; };
 		23CD37001D6AD06300B4FDCE /* car3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car3.jpg; sourceTree = "<group>"; };
 		23CD37011D6AD06300B4FDCE /* car4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car4.jpg; sourceTree = "<group>"; };
+		94051C66D373B0AD2B6EA67F /* libPods-DriverShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DriverShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981CEDAB1D69D400000EC30D /* DriverShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriverShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		981CEDAF1D69D400000EC30D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		981CEDB11D69D400000EC30D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,9 +82,7 @@
 		981CEDCF1D69D400000EC30D /* DriverShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		981CEDD31D69D400000EC30D /* DriverShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverShowUITests.m; sourceTree = "<group>"; };
 		981CEDD51D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD84C5B5A41542FC9B901BE1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAFA29BE111346A81E75F0F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		DCC2F8314A0FF6F1A478B5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC71D818DE2F72D33994240 /* libPods.a in Frameworks */,
+				E2A8687F72378AB2BD0B9E36 /* libPods-DriverShow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +111,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		237986931D6BE0A100509B39 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				2379869E1D6C621000509B39 /* NetWorkTools.h */,
+				2379869F1D6C621000509B39 /* NetWorkTools.m */,
+				237986A01D6C621000509B39 /* NSString+Path.h */,
+				237986A11D6C621000509B39 /* NSString+Path.m */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 		23CD36E91D6AC01B00B4FDCE /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +166,15 @@
 			path = ads;
 			sourceTree = "<group>";
 		};
+		2FD39F48897FA69C12832BD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C2151CBF06872B9D97D5323 /* Pods-DriverShow.debug.xcconfig */,
+				B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		981CEDA21D69D400000EC30D = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +182,8 @@
 				981CEDC71D69D400000EC30D /* DriverShowTests */,
 				981CEDD21D69D400000EC30D /* DriverShowUITests */,
 				981CEDAC1D69D400000EC30D /* Products */,
-				BBEBA7271B07B405EC245734 /* Pods */,
-				F7461A9B3D2C0F499A981FB9 /* Frameworks */,
+				2FD39F48897FA69C12832BD7 /* Pods */,
+				9B75CB9BA4223AC4DAAB29F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +200,7 @@
 		981CEDAD1D69D400000EC30D /* DriverShow */ = {
 			isa = PBXGroup;
 			children = (
+				237986931D6BE0A100509B39 /* Lib */,
 				23CD36E91D6AC01B00B4FDCE /* Main */,
 				981CEDB11D69D400000EC30D /* AppDelegate.h */,
 				981CEDB21D69D400000EC30D /* AppDelegate.m */,
@@ -214,19 +241,10 @@
 			path = DriverShowUITests;
 			sourceTree = "<group>";
 		};
-		BBEBA7271B07B405EC245734 /* Pods */ = {
+		9B75CB9BA4223AC4DAAB29F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DAFA29BE111346A81E75F0F0 /* Pods.debug.xcconfig */,
-				DCC2F8314A0FF6F1A478B5F3 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F7461A9B3D2C0F499A981FB9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AD84C5B5A41542FC9B901BE1 /* libPods.a */,
+				94051C66D373B0AD2B6EA67F /* libPods-DriverShow.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,12 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 981CEDD81D69D400000EC30D /* Build configuration list for PBXNativeTarget "DriverShow" */;
 			buildPhases = (
-				C1DE11A40A1C9F902D02CB90 /* Check Pods Manifest.lock */,
+				15626CF9E323E70A002BE6CF /* [CP] Check Pods Manifest.lock */,
 				981CEDA71D69D400000EC30D /* Sources */,
 				981CEDA81D69D400000EC30D /* Frameworks */,
 				981CEDA91D69D400000EC30D /* Resources */,
-				32383083AE09F91B187C4B03 /* Embed Pods Frameworks */,
-				17CB45A84B916034B2689F9A /* Copy Pods Resources */,
+				EFB61B13C1510242BA76AFED /* [CP] Embed Pods Frameworks */,
+				7BF63AA9F7E0A4B81EBC2BF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,49 +384,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17CB45A84B916034B2689F9A /* Copy Pods Resources */ = {
+		15626CF9E323E70A002BE6CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		32383083AE09F91B187C4B03 /* Embed Pods Frameworks */ = {
+		7BF63AA9F7E0A4B81EBC2BF0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1DE11A40A1C9F902D02CB90 /* Check Pods Manifest.lock */ = {
+		EFB61B13C1510242BA76AFED /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -422,7 +440,9 @@
 				23CD36FC1D6ACEAC00B4FDCE /* HeadScrollView.m in Sources */,
 				23CD36F51D6AC5EE00B4FDCE /* WYCAdvert.m in Sources */,
 				23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */,
+				237986A31D6C621000509B39 /* NSString+Path.m in Sources */,
 				981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */,
+				237986A21D6C621000509B39 /* NetWorkTools.m in Sources */,
 				23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */,
 				981CEDB01D69D400000EC30D /* main.m in Sources */,
 			);
@@ -563,7 +583,7 @@
 		};
 		981CEDD91D69D400000EC30D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAFA29BE111346A81E75F0F0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 0C2151CBF06872B9D97D5323 /* Pods-DriverShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -573,12 +593,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
 		981CEDDA1D69D400000EC30D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCC2F8314A0FF6F1A478B5F3 /* Pods.release.xcconfig */;
+			baseConfigurationReference = B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -588,6 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

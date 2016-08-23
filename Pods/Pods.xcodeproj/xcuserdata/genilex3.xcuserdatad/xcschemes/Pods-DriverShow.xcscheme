@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '928353533005A4198EBDA5B700D37B64'
-               BlueprintName = 'AFNetworking'
+               BlueprintIdentifier = '6203FF74076980C798ADE50D28723CA6'
+               BlueprintName = 'Pods-DriverShow'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libAFNetworking.a'>
+               BuildableName = 'libPods-DriverShow.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
