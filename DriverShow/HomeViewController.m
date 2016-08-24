@@ -10,6 +10,11 @@
 #import "HeadScrollView.h"
 #import "NetWorkTools.h"
 #import "CenterDetailViewController.h"
+#import "MJExtension.h"
+#import "Starts.h"
+
+
+
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 
 
@@ -53,9 +58,14 @@
 
 
 -(void)getNewWork{
-    [[NetWorkTools sharedNetworkTools]POST:@"API/Car/receiveData" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [[NetWorkTools sharedNetworkTools]POST:@"API/Car/onePage" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"请求中");
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+//        Starts *start = [Starts mj_objectWithKeyValues:responseObject];
+        
+        Starts *arr = [Starts mj_objectWithKeyValues:responseObject];
         
         
         NSLog(@"成功%@",responseObject);
