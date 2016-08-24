@@ -11,9 +11,7 @@
 #import "NetWorkTools.h"
 #import "CenterDetailViewController.h"
 #import "MJExtension.h"
-#import "Starts.h"
-
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 
@@ -32,6 +30,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *rightFotter;
 
+@property (nonatomic, strong) HeadScrollView *scrollView;
 
 @end
 
@@ -49,29 +48,65 @@
     
     self.navigationItem.leftBarButtonItem.title = @"北京";
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-
+    
+    [self InitData];
     
     [self createInfiniteScrollView];
     
-    [self getNewWork];
+    
 }
 
 
--(void)getNewWork{
+
+
+
+-(void)InitData{
+    
     [[NetWorkTools sharedNetworkTools]POST:@"API/Car/onePage" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"请求中");
+        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        [Starts mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"Result":@"result"
+                     };
+        }];
         
-//        Starts *start = [Starts mj_objectWithKeyValues:responseObject];
+      
         
-        Starts *arr = [Starts mj_objectWithKeyValues:responseObject];
+        Starts *start = [Starts mj_objectWithKeyValues:responseObject];
+       
+        self.startModel = start;
+        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:4];
+        
+            for (NSString *item in self.startModel.result.banner) {
+        
+                UIImageView *imv = [[UIImageView alloc]init];
+        
+                [imv sd_setImageWithURL:[NSURL URLWithString:item]
+                                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]
+                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+                                             NSLog(@"ok");
+        
+                                                }
+                 ];
+                [arr addObject:imv];
+                
+            }
+        
+            self.scrollView.images = arr;
         
         
-        NSLog(@"成功%@",responseObject);
+        
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
         NSLog(@"失败:%@",error);
     }];
+    
+
+    
 }
 
 
@@ -80,18 +115,24 @@
 - (void)createInfiniteScrollView {
     
     //44
-    HeadScrollView *scrollView = [[HeadScrollView alloc] init];
-    scrollView.frame = CGRectMake(0,64, kDeviceWidth, 250 );
-    scrollView.images = @[
+    self.scrollView = [[HeadScrollView alloc] init];
+    
+    self.scrollView.frame = CGRectMake(0,64, kDeviceWidth, 250 );
+    
+    
+    
+
+    
+    self.scrollView.images =  @[
                           [UIImage imageNamed:@"car1.jpg"],
                           [UIImage imageNamed:@"car2.jpg"],
                           [UIImage imageNamed:@"car3.jpg"],
-                          [UIImage imageNamed:@"car4.jpg"],
+//                          [UIImage imageNamed:@"car4.jpg"],
                           ];
-    scrollView.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
-    scrollView.pageControl.pageIndicatorTintColor = [UIColor grayColor];
-    scrollView.delegate = self;
-    [self.view addSubview:scrollView];
+    self.scrollView.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
+    self.scrollView.pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    self.scrollView.delegate = self;
+    [self.view addSubview:self.scrollView];
 }
 
 
@@ -123,6 +164,7 @@
 
 
 
+#pragma mark  lazy
 
 
 

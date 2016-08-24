@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Starts.h"
+
 
 @interface HomeViewController : UIViewController
+
+
+@property (nonatomic, strong) Starts *startModel;
+
 
 @end

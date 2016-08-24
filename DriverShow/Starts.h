@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface result:NSObject
+
+
+@interface Result : NSObject
 @property (nonatomic, assign) NSArray *banner;
 @property (nonatomic, copy) NSString *onepic;
 @property (nonatomic, copy) NSString *secondpic;
@@ -16,10 +18,9 @@
 @end
 
 
-
 @interface Starts : NSObject
 
-@property (nonatomic, assign) result *result;
+@property (nonatomic, strong) Result *result;
 @property (nonatomic, copy) NSString *status;
 
 @end

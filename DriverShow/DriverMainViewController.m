@@ -8,6 +8,8 @@
 
 #import "DriverMainViewController.h"
 
+
+
 @interface DriverMainViewController ()
 
 @end
@@ -22,6 +24,12 @@
 //    self.navigationBar.backgroundColor = [UIColor blackColor];
 //    
 //    self.navigationBar.tintColor = [UIColor blackColor];
+    
+//    HomeViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+//    vc.startModel = self.startModel;
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

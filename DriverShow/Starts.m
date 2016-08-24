@@ -11,3 +11,6 @@
 @implementation Starts
 
 @end
+@implementation Result
+
+@end

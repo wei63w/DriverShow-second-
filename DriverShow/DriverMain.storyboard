@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="UgN-rf-v32" kind="relationship" relationship="rootViewController" id="NOA-hE-u7y"/>
+                        <segue destination="UgN-rf-v32" kind="relationship" relationship="rootViewController" id="KUQ-mq-q6F"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEp-bU-u4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,7 +24,7 @@
         <!--Title-->
         <scene sceneID="FHo-Z1-15D">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UgN-rf-v32" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="UgN-rf-v32" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="966-9d-w3P"/>
                         <viewControllerLayoutGuide type="bottom" id="Jzz-kQ-P9e"/>
@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Cj-1hF" userLabel="centerview">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Cj-1hF" userLabel="centerview">
                                 <rect key="frame" x="0.0" y="315" width="600" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o80-Cg-ZTd" userLabel="centerBtn">
@@ -52,16 +52,16 @@
                                     <constraint firstAttribute="bottom" secondItem="o80-Cg-ZTd" secondAttribute="bottom" id="q2R-Cr-0Km"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-Ff-t7j">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-Ff-t7j">
                                 <rect key="frame" x="0.0" y="64" width="600" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="c7t-xV-gun"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-zL-hBw" userLabel="rightview">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-zL-hBw" userLabel="rightview">
                                 <rect key="frame" x="300" y="565" width="300" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chT-u5-cMM" userLabel="rightBtn">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chT-u5-cMM" userLabel="rightBtn">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
                                         <connections>
                                             <action selector="rightBtnClick:" destination="UgN-rf-v32" eventType="touchUpInside" id="NMz-rV-XNq"/>
@@ -76,10 +76,10 @@
                                     <constraint firstItem="chT-u5-cMM" firstAttribute="top" secondItem="iLj-zL-hBw" secondAttribute="top" id="kCV-EF-pdU"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-uH-Uhj" userLabel="leftview">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-uH-Uhj" userLabel="leftview">
                                 <rect key="frame" x="0.0" y="565" width="300" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBj-Ow-f1q" userLabel="leftBtn">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBj-Ow-f1q" userLabel="leftBtn">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
                                         <connections>
                                             <action selector="leftBtnClick:" destination="UgN-rf-v32" eventType="touchUpInside" id="Udj-BT-cVg"/>
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUb-Ec-C63" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="116"/>
+            <point key="canvasLocation" x="418" y="176"/>
         </scene>
     </scenes>
 </document>
