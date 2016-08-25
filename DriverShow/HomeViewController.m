@@ -48,10 +48,16 @@
     self.navigationItem.leftBarButtonItem.title = @"北京";
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     
+    self.NavBar.title = @"";
+    
+    
+    
     [self InitData];
     [self createInfiniteScrollView];
     [self setViewImage];
-    [self addDescribeStr];
+    
+    
+ 
 }
 
 
@@ -77,6 +83,13 @@
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                             }
      ];
+    
+    self.centerOneLab.text = self.startModel.result.oneename;
+    self.centerTwoLab.text = self.startModel.result.onecname;
+    self.leftOneLab.text = self.startModel.result.secondename;
+    self.leftTwoLab.text = self.startModel.result.secondcname;
+    self.rightOneLab.text = self.startModel.result.thirdename;
+    self.rightTwoLab.text = self.startModel.result.thirdcname;
     
     [self.leftImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.secondpic]
                       placeholderImage:[UIImage imageNamed:@"placeholder"]
@@ -117,16 +130,6 @@
     }
 }
 
--(void)addDescribeStr{
-    CGRect centerRec = self.centerView.frame;
-    UILabel *centerLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, centerRec.size.width, 30)];
-    [centerLab setBackgroundColor:[UIColor yellowColor]];
-    [centerLab setTextAlignment:NSTextAlignmentCenter];
-    [centerLab setTextColor:[UIColor whiteColor]];
-    centerLab.text = @"Self-Driving Rental";
-    [self.centerBtn addSubview:centerLab];
-    [self.centerBtn.window sendSubviewToBack:centerLab];
-}
 
 
 //创建顶部的轮播图
@@ -161,6 +164,15 @@
 - (IBAction)centerBtnClick:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CenterDetail" bundle:nil];
     CenterDetailViewController *vc = sb.instantiateInitialViewController;
+    
+//    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+//    title.text = @"全部车型";
+//    title.textAlignment = NSTextAlignmentCenter;
+//    title.textColor = [UIColor whiteColor];
+//    vc.navigationItem.titleView = title;
+    
+    
+    
     
     [self.navigationController pushViewController:vc animated:YES];
     
