@@ -15,5 +15,9 @@
 
 @property (nonatomic, strong) Starts *startModel;
 
+@property (weak, nonatomic) IBOutlet UIView *centerView;
+@property (weak, nonatomic) IBOutlet UIView *leftView;
+@property (weak, nonatomic) IBOutlet UIView *rightView;
+@property (weak, nonatomic) IBOutlet UIButton *centerBtn;
 
 @end

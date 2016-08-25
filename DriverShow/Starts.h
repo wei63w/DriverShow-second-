@@ -15,6 +15,12 @@
 @property (nonatomic, copy) NSString *onepic;
 @property (nonatomic, copy) NSString *secondpic;
 @property (nonatomic, copy) NSString *thirdpic;
+@property (nonatomic, copy) NSString *onecname;
+@property (nonatomic, copy) NSString *oneename;
+@property (nonatomic, copy) NSString *secondcname;
+@property (nonatomic, copy) NSString *secondename;
+@property (nonatomic, copy) NSString *thirdcname;
+@property (nonatomic, copy) NSString *thirdename;
 @end
 
 

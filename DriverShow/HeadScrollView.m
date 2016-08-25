@@ -7,6 +7,8 @@
 //
 
 #import "HeadScrollView.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+
 
 static int const ImageViewCount = 3;
 
@@ -153,7 +155,18 @@ static int const ImageViewCount = 3;
             index = 0;
         }
         imageView.tag = index;
-        imageView.image = self.images[index];
+        
+        
+//        imageView.image = self.images[index];
+        //ADD
+        NSString *imgStr = self.images[index];
+        
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imgStr]
+                          placeholderImage:[UIImage imageNamed:@"placeholder"]
+                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                 }
+         ];
+        //end
         
         //添加手势
         imageView.userInteractionEnabled = YES;

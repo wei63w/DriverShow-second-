@@ -21,16 +21,15 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *NavBar;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *LiftItem;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *RightItem;
 
+@property (weak, nonatomic) IBOutlet UIImageView *centerImg;
 
-@property (weak, nonatomic) IBOutlet UIView *centerContent;
+@property (weak, nonatomic) IBOutlet UIImageView *rightImg;
 
-@property (weak, nonatomic) IBOutlet UIView *leftFotter;
-
-@property (weak, nonatomic) IBOutlet UIView *rightFotter;
+@property (weak, nonatomic) IBOutlet UIImageView *leftImg;
 
 @property (nonatomic, strong) HeadScrollView *scrollView;
+@property (nonatomic, strong) NSArray *imgArr;
 
 @end
 
@@ -50,65 +49,84 @@
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     
     [self InitData];
-    
     [self createInfiniteScrollView];
-    
-    
+    [self setViewImage];
+    [self addDescribeStr];
 }
 
 
 
 
 
--(void)InitData{
-    
+-(void)InitData2{
     [[NetWorkTools sharedNetworkTools]POST:@"API/Car/onePage" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"失败:%@",error);
+    }];
+}
+
+-(void)setViewImage{
+    
+    [self.centerImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.onepic]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                            }
+     ];
+    
+    [self.leftImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.secondpic]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                             }
+     ];
+    [self.rightImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.thirdpic]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                             }
+     ];
+    
+}
+
+
+-(void)InitData{
+    NSString *urlStr = @"http://muxinzuche.com/API/Car/onePage";
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *urlrequest = [[NSMutableURLRequest alloc]initWithURL:url];
+    urlrequest.HTTPMethod = @"POST";
+   
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:urlrequest returningResponse:&response error:&error];
+    
+    if (error == nil) {//成功
         [Starts mj_setupObjectClassInArray:^NSDictionary *{
             return @{
                      @"Result":@"result"
                      };
         }];
-        
-      
-        
-        Starts *start = [Starts mj_objectWithKeyValues:responseObject];
-       
+        Starts *start = [Starts mj_objectWithKeyValues:data];
         self.startModel = start;
-        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:4];
         
-            for (NSString *item in self.startModel.result.banner) {
-        
-                UIImageView *imv = [[UIImageView alloc]init];
-        
-                [imv sd_setImageWithURL:[NSURL URLWithString:item]
-                                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]
-                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-                                             NSLog(@"ok");
-        
-                                                }
-                 ];
-                [arr addObject:imv];
-                
-            }
-        
-            self.scrollView.images = arr;
-        
-        
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-
-        NSLog(@"失败:%@",error);
-    }];
-    
-
-    
+    }else{
+        NSLog(@"错误:%@",error);
+    }
 }
 
+-(void)addDescribeStr{
+    CGRect centerRec = self.centerView.frame;
+    UILabel *centerLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, centerRec.size.width, 30)];
+    [centerLab setBackgroundColor:[UIColor yellowColor]];
+    [centerLab setTextAlignment:NSTextAlignmentCenter];
+    [centerLab setTextColor:[UIColor whiteColor]];
+    centerLab.text = @"Self-Driving Rental";
+    [self.centerBtn addSubview:centerLab];
+    [self.centerBtn.window sendSubviewToBack:centerLab];
+}
 
 
 //创建顶部的轮播图
@@ -118,17 +136,13 @@
     self.scrollView = [[HeadScrollView alloc] init];
     
     self.scrollView.frame = CGRectMake(0,64, kDeviceWidth, 250 );
-    
-    
-    
-
-    
-    self.scrollView.images =  @[
-                          [UIImage imageNamed:@"car1.jpg"],
-                          [UIImage imageNamed:@"car2.jpg"],
-                          [UIImage imageNamed:@"car3.jpg"],
+//    self.scrollView.images =  @[
+//                          [UIImage imageNamed:@"car1.jpg"],
+//                          [UIImage imageNamed:@"car2.jpg"],
+//                          [UIImage imageNamed:@"car3.jpg"],
 //                          [UIImage imageNamed:@"car4.jpg"],
-                          ];
+//                          ];
+    self.scrollView.images = self.startModel.result.banner;
     self.scrollView.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
     self.scrollView.pageControl.pageIndicatorTintColor = [UIColor grayColor];
     self.scrollView.delegate = self;
