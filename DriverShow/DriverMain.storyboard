@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s11-NR-w9p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s11-NR-w9p">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -138,12 +138,12 @@
                                         <exclude reference="QN3-xN-5cv"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="7Gj-NI-C73"/>
-                                        <exclude reference="ljm-Qn-Mkc"/>
-                                        <exclude reference="qPa-lW-W0l"/>
                                         <exclude reference="7FY-fx-T5F"/>
                                         <exclude reference="EBg-VD-ISn"/>
                                         <exclude reference="JlD-4t-maK"/>
+                                        <exclude reference="7Gj-NI-C73"/>
+                                        <exclude reference="ljm-Qn-Mkc"/>
+                                        <exclude reference="qPa-lW-W0l"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -152,12 +152,12 @@
                                         <include reference="QN3-xN-5cv"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="7Gj-NI-C73"/>
-                                        <include reference="ljm-Qn-Mkc"/>
-                                        <include reference="qPa-lW-W0l"/>
                                         <include reference="7FY-fx-T5F"/>
                                         <include reference="EBg-VD-ISn"/>
                                         <include reference="JlD-4t-maK"/>
+                                        <include reference="7Gj-NI-C73"/>
+                                        <include reference="ljm-Qn-Mkc"/>
+                                        <include reference="qPa-lW-W0l"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -211,12 +211,12 @@
                                         <exclude reference="Zn8-OJ-z6y"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="1R3-Ap-2ar"/>
-                                        <exclude reference="RTt-oU-OSK"/>
-                                        <exclude reference="ZHO-89-X6K"/>
                                         <exclude reference="4sg-4j-dgQ"/>
                                         <exclude reference="axG-rZ-RBB"/>
                                         <exclude reference="bfR-9h-lTY"/>
+                                        <exclude reference="1R3-Ap-2ar"/>
+                                        <exclude reference="RTt-oU-OSK"/>
+                                        <exclude reference="ZHO-89-X6K"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -225,12 +225,12 @@
                                         <include reference="Zn8-OJ-z6y"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="1R3-Ap-2ar"/>
-                                        <include reference="RTt-oU-OSK"/>
-                                        <include reference="ZHO-89-X6K"/>
                                         <include reference="4sg-4j-dgQ"/>
                                         <include reference="axG-rZ-RBB"/>
                                         <include reference="bfR-9h-lTY"/>
+                                        <include reference="1R3-Ap-2ar"/>
+                                        <include reference="RTt-oU-OSK"/>
+                                        <include reference="ZHO-89-X6K"/>
                                     </mask>
                                 </variation>
                             </view>

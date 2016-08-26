@@ -7,6 +7,7 @@
 //
 
 #import "CenterDetailViewController.h"
+#import "DetailTableViewCell.h"
 
 @interface CenterDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -40,11 +41,16 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"第%ld",indexPath.row];
+     DetailTableViewCell   *cell = [DetailTableViewCell DetailCellCellWithTbleView:tableView];
+     
+
+    DetailCellModel *model = [[DetailCellModel alloc]init];
+    model.carName = @"法拉利";
+    model.money = @"$11300/日(按周)";
+    model.toWay = @"按月:面议";
+    cell.model = model;
+//    [cell loadDetailCellWithModel:model];
+//    cell.textLabel.text = [NSString stringWithFormat:@"第%ld",indexPath.row];
     
     return cell;
 }

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailCellModel.h"
+
 
 @interface CenterDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
