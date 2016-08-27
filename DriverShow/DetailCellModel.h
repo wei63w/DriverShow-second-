@@ -11,7 +11,7 @@
 @interface DetailCellModel : NSObject
 
 
-@property (nonatomic, copy) NSString *imgName;
+@property (nonatomic, copy) NSString *imgStr;
 
 /**
  *  名称

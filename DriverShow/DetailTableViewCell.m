@@ -7,11 +7,12 @@
 //
 
 #import "DetailTableViewCell.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+
+
 @interface DetailTableViewCell()
 
-
-@property (weak, nonatomic) IBOutlet UIView *ImgBg;
-
+@property (weak, nonatomic) IBOutlet UIImageView *bgView;
 
 @property (weak, nonatomic) IBOutlet UIView *rightView;
 
@@ -43,6 +44,7 @@
     self.money.textColor = [UIColor whiteColor];
     self.toWay.textColor =[UIColor whiteColor];
     
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -50,7 +52,7 @@
 
     // Configure the view for the selected state
 }
-+(instancetype)DetailCellCellWithTbleView:(UITableView *)tableView{
++(instancetype)DetailCellWithTbleView:(UITableView *)tableView{
     static NSString *ID = @"cell";
     DetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if(cell==nil)
@@ -60,17 +62,17 @@
     return  cell;
 }
 -(void)setModel:(DetailCellModel *)model{
-    self.carName.text = model.carName;
-    self.money.text = model.money;
-    self.toWay.text = model.toWay;
-}
--(void)loadDetailCellWithModel:(DetailCellModel *)model{
-    _model = model;
+    
+    
+    [self.bgView sd_setImageWithURL:[NSURL URLWithString:model.imgStr]
+                 placeholderImage:[UIImage imageNamed:@"placeholder"]
+                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                        }
+     ];
     
     self.carName.text = model.carName;
-    self.money.text = model.money;
+    self.money.text = [NSString stringWithFormat:@"￥%@/日(按周)",model.money];
     self.toWay.text = model.toWay;
-    
 }
 
 

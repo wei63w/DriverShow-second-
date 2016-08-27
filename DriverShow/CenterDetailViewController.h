@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailCellModel.h"
-
+#import "CenterModel.h"
 
 @interface CenterDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) CenterModel *centerModel;
+
 
 @end
