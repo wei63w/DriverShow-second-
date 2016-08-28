@@ -10,10 +10,14 @@
 #import "DetailTableViewCell.h"
 #import "MJExtension.h"
 #import "CustomButton.h"
+#import "NetWorkTools.h"
+#import "LastModel.h"
+#import "SinglePageViewController.h"
 
 
-@interface CenterDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CenterDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic, assign) NSInteger selectedIndex;
@@ -28,6 +32,12 @@
 @implementation CenterDetailViewController
 
 - (void)viewDidLoad {
+    
+    
+    
+    
+    
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.isShow = NO;
@@ -35,16 +45,35 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    [self resetTitle:@"全部车型"];
     
-        UIButton *title = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
-        [title setTitle:@"全部车型" forState:UIControlStateNormal];
-        [title addTarget:self action:@selector(labelTap) forControlEvents:UIControlEventTouchUpInside];
-        [title setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        self.navigationItem.titleView = title;
-    
-//      self.navigationItem.leftBarButtonItem.title = @"aa";
-    
+    [self setLeftBarButtonItem];
 }
+-(void)setLeftBarButtonItem{
+    // need delegate can right swipe -->UIGestureRecognizerDelegate
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 44, 44);
+    
+    UIImageView *imgv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 10, 20, 20)];
+    imgv.image = [UIImage imageNamed:@"leftArrow"];
+    [backBtn addSubview:imgv];
+    
+    [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+
+
+-(void)doBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 -(void)labelTap{
     NSLog(@"点击标题");
@@ -62,7 +91,6 @@
     self.maskView = [[UIView alloc]initWithFrame:rec];
     self.maskView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     
-    NSArray<Brand *> *brandLis = self.centerModel.result.brand;
     int totalloc=3;
     CGFloat appvieww=100;
     CGFloat appviewh=50;
@@ -94,6 +122,7 @@
         
         CustomButton *btn = [[CustomButton alloc]initWithFrame:CGRectMake(0, 0, appvieww, appviewh)];
         [btn setTitle:brand.brandname forState:UIControlStateNormal];
+        btn.brandName = brand.brandname;
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         btn.brandid = [brand.brandid intValue];
         btn.tag = i;
@@ -112,27 +141,43 @@
         
         [self.maskView addSubview:appview];
     }
-    
-    
-//    NSDictionary *parameters = @{@"receive":@"first"};
-//    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        
-//       
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        
-//        NSLog(@"失败:%@",error);
-//    }];
-//    
     [self.view addSubview:self.maskView];
     
     
 }
 
+//重新设置标题
+-(void)resetTitle:(NSString *)str{
+    //重新设置标题
+    UIView *tempTitleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+    
+    UIButton *title = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+    
+    UIImage *img = [UIImage imageNamed:@"downArrow"];
+    UIImageView *imgv = [[UIImageView alloc]initWithFrame:CGRectMake(90, 3, 20, 20)];
+    imgv.image = img;
+
+    [title setTitle:str forState:UIControlStateNormal];
+    [title addTarget:self action:@selector(labelTap) forControlEvents:UIControlEventTouchUpInside];
+    [title setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [tempTitleView addSubview:title];
+    [tempTitleView addSubview:imgv];
+    self.navigationItem.titleView = tempTitleView;
+}
+
+
+
+//选中标题系列
 -(void)chooseSeriase:(id)btn{
     CustomButton *tempBtn = (CustomButton *)btn;
+    
+    //重新设置标题 tempBtn.brandName
+    [self resetTitle:tempBtn.brandName];
+    
+    
+    
+    
     self.selectedIndex = tempBtn.tag;
     self.selectedBandId = tempBtn.brandid;
     NSMutableArray<Car *> *tempLis = [NSMutableArray arrayWithCapacity:10];
@@ -153,7 +198,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (self.selectedBandId == 0 || self.selectedBandId == nil) {
+    if (self.selectedBandId == 0 || self.selectedBandId == 1) {
         return self.centerModel.result.car.count;
     }else{
         NSInteger temIndex = 0;
@@ -166,8 +211,6 @@
         
         return temIndex;
     }
-    
-    
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
@@ -180,7 +223,7 @@
                   @"carbrand":@"brand"
                   };
      }];
-    if (self.selectedBandId == 0 || self.selectedBandId == nil) {
+    if (self.selectedBandId == 0 || self.selectedBandId == 1) {
         _carLis = self.centerModel.result.car;
     }
     
@@ -193,12 +236,60 @@
     model.carName = tempCar.carname;
     model.money = tempCar.weeksprice;
     model.toWay = @"按月:面议";
+    
     cell.model = model;
     
     return cell;
 }
 
-
+NSDictionary *parameterss;
+//选中cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [Car mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"carid":@"id",
+                 @"carname":@"name",
+                 @"carbrand":@"brand"
+                 };
+    }];
+     Car *tempCar = [Car mj_objectWithKeyValues:_carLis[indexPath.row]];
+     NSLog(@"%@",tempCar.carbrand);
+    
+    parameterss = @{@"id":@"39"};
+    
+    NSLog(@"%@",parameterss);
+    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/rentDetail" parameters:parameterss progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [LastModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return @{
+                     @"lastid":@"id"
+                     };
+        }];
+        [LastData mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"result":@"LastModel",
+                     };
+        }];
+        LastData *lastdata = [LastData mj_objectWithKeyValues:responseObject];;
+        
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SinglePageViewController" bundle:nil];
+        SinglePageViewController *vc = sb.instantiateInitialViewController;
+        vc.lastModel = lastdata.result;
+        
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    
+        NSLog(@"失败:%@",error);
+    }];
+    
+    
+    
+    
+}
 
 
 

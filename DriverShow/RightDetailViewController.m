@@ -13,7 +13,7 @@
 #import "DesModel.h"
 #import "DetailPageViewController.h"
 
-@interface RightDetailViewController ()
+@interface RightDetailViewController ()<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *one;
 
@@ -56,7 +56,27 @@
     [self loadData:self.five andCurrentIndex:4];
     [self loadData:self.six andCurrentIndex:5];
 }
-
+-(void)setLeftBarButtonItem{
+    // need delegate can right swipe -->UIGestureRecognizerDelegate
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 44, 44);
+    
+    UIImageView *imgv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 10, 20, 20)];
+    imgv.image = [UIImage imageNamed:@"leftArrow"];
+    [backBtn addSubview:imgv];
+    
+    [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+-(void)doBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 -(void)loadData:(UIView *)target andCurrentIndex:(NSInteger)currentIndex{
     

@@ -11,7 +11,7 @@
 #import "MJExtension.h"
 
 
-@interface LeftDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LeftDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -26,7 +26,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    [self setLeftBarButtonItem];
     
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
     title.text = @"婚庆租车";
@@ -34,6 +34,28 @@
     title.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = title;
 }
+-(void)setLeftBarButtonItem{
+    // need delegate can right swipe -->UIGestureRecognizerDelegate
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 44, 44);
+    
+    UIImageView *imgv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 10, 20, 20)];
+    imgv.image = [UIImage imageNamed:@"leftArrow"];
+    [backBtn addSubview:imgv];
+    
+    [backBtn addTarget:self action:@selector(doBack:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+-(void)doBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }

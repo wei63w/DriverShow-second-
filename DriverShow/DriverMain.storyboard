@@ -14,14 +14,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="UgN-rf-v32" kind="relationship" relationship="rootViewController" id="KUQ-mq-q6F"/>
+                        <segue destination="UgN-rf-v32" kind="relationship" relationship="rootViewController" id="a54-p1-lkr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEp-bU-u4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-368" y="176"/>
         </scene>
-        <!--Title-->
+        <!--Home View Controller-->
         <scene sceneID="FHo-Z1-15D">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="UgN-rf-v32" customClass="HomeViewController" sceneMemberID="viewController">
@@ -33,14 +33,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Cj-1hF" userLabel="centerview">
-                                <rect key="frame" x="0.0" y="315" width="600" height="250"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Cj-1hF" userLabel="centerview">
+                                <rect key="frame" x="0.0" y="271" width="600" height="250"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aAE-lz-ELN">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="30"/>
+                                        </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o80-Cg-ZTd" userLabel="centerBtn">
-                                        <rect key="frame" x="20" y="0.0" width="580" height="151"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o80-Cg-ZTd" userLabel="centerBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                         <connections>
                                             <action selector="centerBtnClick:" destination="UgN-rf-v32" eventType="touchUpInside" id="Rjf-P3-YRK"/>
                                         </connections>
@@ -54,6 +57,9 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="-20" width="400" height="30"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7w-bG-fUD" userLabel="centerTwo">
                                         <rect key="frame" x="0.0" y="139" width="600" height="21"/>
@@ -61,6 +67,9 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="29" width="400" height="21"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56434097853739629" green="1" blue="0.39863766383529942" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,21 +90,24 @@
                                     <constraint firstAttribute="bottom" secondItem="o80-Cg-ZTd" secondAttribute="bottom" id="q2R-Cr-0Km"/>
                                     <constraint firstItem="O7w-bG-fUD" firstAttribute="centerX" secondItem="8Qb-dB-Rh7" secondAttribute="centerX" id="uHa-pn-ffe"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="315" width="400" height="30"/>
+                                </variation>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-Ff-t7j">
-                                <rect key="frame" x="0.0" y="64" width="600" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="c7t-xV-gun"/>
-                                </constraints>
-                            </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-zL-hBw" userLabel="rightview">
-                                <rect key="frame" x="300" y="565" width="300" height="35"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-zL-hBw" userLabel="rightview">
+                                <rect key="frame" x="300" y="521" width="300" height="79"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEh-Jt-O7M">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEh-Jt-O7M">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="55"/>
+                                        </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chT-u5-cMM" userLabel="rightBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chT-u5-cMM" userLabel="rightBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        </variation>
                                         <connections>
                                             <action selector="rightBtnClick:" destination="UgN-rf-v32" eventType="touchUpInside" id="NMz-rV-XNq"/>
                                         </connections>
@@ -106,9 +118,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="132.5" width="300" height="30"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCw-RC-VGu" userLabel="rightOne">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -116,9 +125,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="82" width="300" height="30"/>
-                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.78069972411883581" green="1" blue="0.59520138562254399" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,15 +172,24 @@
                                         <include reference="qPa-lW-W0l"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="200" y="345" width="200" height="55"/>
+                                </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-uH-Uhj" userLabel="leftview">
-                                <rect key="frame" x="0.0" y="565" width="300" height="35"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-uH-Uhj" userLabel="leftview">
+                                <rect key="frame" x="0.0" y="521" width="300" height="79"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-Rw-wqd">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-Rw-wqd">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="55"/>
+                                        </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBj-Ow-f1q" userLabel="leftBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBj-Ow-f1q" userLabel="leftBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        </variation>
                                         <connections>
                                             <action selector="leftBtnClick:" destination="UgN-rf-v32" eventType="touchUpInside" id="Udj-BT-cVg"/>
                                         </connections>
@@ -185,9 +200,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="82.5" width="300" height="30"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn8-OJ-z6y" userLabel="leftTwo">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -195,9 +207,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="132.5" width="300" height="30"/>
-                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84473492613711887" green="1" blue="0.45177289850379521" alpha="1" colorSpace="calibratedRGB"/>
@@ -245,7 +254,19 @@
                                         <include reference="ZHO-89-X6K"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="345" width="200" height="55"/>
+                                </variation>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-Ff-t7j">
+                                <rect key="frame" x="0.0" y="64" width="600" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="c7t-xV-gun"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="250"/>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -267,12 +288,8 @@
                             <constraint firstItem="POM-Cj-1hF" firstAttribute="top" secondItem="UI3-Ff-t7j" secondAttribute="bottom" constant="1" id="ywi-iz-U17"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="VIo-Rf-na6">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="pP3-Em-bzZ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ISN-V6-pN7"/>
                     <connections>
-                        <outlet property="LiftItem" destination="pP3-Em-bzZ" id="gCe-T6-E3V"/>
-                        <outlet property="NavBar" destination="VIo-Rf-na6" id="QBJ-se-bac"/>
                         <outlet property="centerBtn" destination="o80-Cg-ZTd" id="rMQ-lO-USZ"/>
                         <outlet property="centerImg" destination="aAE-lz-ELN" id="ZOh-ww-rXA"/>
                         <outlet property="centerOneLab" destination="8Qb-dB-Rh7" id="jAv-an-J1l"/>

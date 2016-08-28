@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="abccba" id="8Jx-O3-lKG">
-                                        <barButtonItem key="leftBarButtonItem" title="cc" id="EDg-ly-u9u"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="gq8-k8-FCt"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -116,6 +116,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="8Jx-O3-lKG" id="Wml-iZ-R1a"/>
                         <outlet property="tableView" destination="BHU-Q8-oJ1" id="BnB-ea-Afj"/>
                     </connections>
                 </viewController>

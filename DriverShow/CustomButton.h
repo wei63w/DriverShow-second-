@@ -12,4 +12,7 @@
 
 @property (nonatomic, assign) NSInteger brandid;
 
+@property (nonatomic, copy) NSString *brandName;
+
+
 @end

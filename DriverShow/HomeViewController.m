@@ -50,7 +50,15 @@
     title.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = title;
     
-    self.navigationItem.leftBarButtonItem.title = @"北京";
+    
+    
+    
+    UIBarButtonItem *bb = [[UIBarButtonItem alloc]initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(leftTouch)];
+    self.navigationItem.leftBarButtonItem = bb;
+   
+    
+    
+    
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     
     self.NavBar.title = @"";
@@ -64,7 +72,9 @@
     
  
 }
-
+-(void)leftTouch{
+    NSLog(@"嘿嘿嘿");
+}
 
 
 
@@ -183,6 +193,16 @@
         CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
         
         vc.centerModel = centerModel;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         [self.navigationController pushViewController:vc animated:YES];
         
