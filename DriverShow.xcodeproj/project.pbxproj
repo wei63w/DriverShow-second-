@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		237986A21D6C621000509B39 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2379869F1D6C621000509B39 /* NetWorkTools.m */; };
 		237986A31D6C621000509B39 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 237986A11D6C621000509B39 /* NSString+Path.m */; };
+		239F72EB1D6DB329001069B8 /* Starts.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F72EA1D6DB329001069B8 /* Starts.m */; };
+		23AC8DC81D70517400AB142F /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DC71D70517400AB142F /* DetailTableViewCell.m */; };
+		23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */; };
 		23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */; };
 		23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */; };
 		23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36F01D6AC19A00B4FDCE /* HomeViewController.m */; };
@@ -18,14 +21,28 @@
 		23CD37031D6AD06300B4FDCE /* car2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36FF1D6AD06300B4FDCE /* car2.jpg */; };
 		23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD37001D6AD06300B4FDCE /* car3.jpg */; };
 		23CD37051D6AD06300B4FDCE /* car4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23CD37011D6AD06300B4FDCE /* car4.jpg */; };
+		981737FB1D731F680099787D /* LastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 981737FA1D731F680099787D /* LastModel.m */; };
+		981737FF1D7328930099787D /* SinglePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981737FE1D7328930099787D /* SinglePageViewController.m */; };
+		981738011D73289C0099787D /* SinglePageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981738001D73289C0099787D /* SinglePageViewController.storyboard */; };
 		981CEDB01D69D400000EC30D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDAF1D69D400000EC30D /* main.m */; };
 		981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDB21D69D400000EC30D /* AppDelegate.m */; };
-		981CEDB61D69D400000EC30D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDB51D69D400000EC30D /* ViewController.m */; };
-		981CEDB91D69D400000EC30D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDB71D69D400000EC30D /* Main.storyboard */; };
 		981CEDBB1D69D400000EC30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDBA1D69D400000EC30D /* Assets.xcassets */; };
 		981CEDBE1D69D400000EC30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */; };
 		981CEDC91D69D400000EC30D /* DriverShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDC81D69D400000EC30D /* DriverShowTests.m */; };
 		981CEDD41D69D400000EC30D /* DriverShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981CEDD31D69D400000EC30D /* DriverShowUITests.m */; };
+		986C594A1D7149DE00B58572 /* CenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59491D7149DE00B58572 /* CenterModel.m */; };
+		986C594E1D716D5B00B58572 /* LeftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C594D1D716D5B00B58572 /* LeftDetailViewController.m */; };
+		986C59501D716D6A00B58572 /* LeftDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986C594F1D716D6A00B58572 /* LeftDetailViewController.storyboard */; };
+		986C59531D71732900B58572 /* LeftDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59521D71732900B58572 /* LeftDetailTableViewCell.m */; };
+		986C59561D7181E900B58572 /* ThridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59551D7181E900B58572 /* ThridModel.m */; };
+		986C595A1D71825100B58572 /* RightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59591D71825100B58572 /* RightDetailViewController.m */; };
+		986C595C1D71825800B58572 /* RightDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986C595B1D71825800B58572 /* RightDetailViewController.storyboard */; };
+		986C595F1D719C8400B58572 /* DetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986C595E1D719C8400B58572 /* DetailPage.storyboard */; };
+		986C59621D71A1D600B58572 /* DetailPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59611D71A1D600B58572 /* DetailPageViewController.m */; };
+		986C59651D71A32000B58572 /* DesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59641D71A32000B58572 /* DesModel.m */; };
+		986C59681D71D45100B58572 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C59671D71D45100B58572 /* CustomButton.m */; };
+		98BE806D1D6C8E6100CB7611 /* CenterDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BE806C1D6C8E6100CB7611 /* CenterDetail.storyboard */; };
+		98BE80701D6C8E8B00CB7611 /* CenterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BE806F1D6C8E8B00CB7611 /* CenterDetailViewController.m */; };
 		E2A8687F72378AB2BD0B9E36 /* libPods-DriverShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051C66D373B0AD2B6EA67F /* libPods-DriverShow.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +69,12 @@
 		2379869F1D6C621000509B39 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
 		237986A01D6C621000509B39 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
 		237986A11D6C621000509B39 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		239F72E91D6DB329001069B8 /* Starts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Starts.h; sourceTree = "<group>"; };
+		239F72EA1D6DB329001069B8 /* Starts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Starts.m; sourceTree = "<group>"; };
+		23AC8DC61D70517400AB142F /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		23AC8DC71D70517400AB142F /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		23AC8DCA1D7056DA00AB142F /* DetailCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCellModel.h; sourceTree = "<group>"; };
+		23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCellModel.m; sourceTree = "<group>"; };
 		23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DriverMain.storyboard; sourceTree = "<group>"; };
 		23CD36EC1D6AC06800B4FDCE /* DriverMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverMainViewController.h; sourceTree = "<group>"; };
 		23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverMainViewController.m; sourceTree = "<group>"; };
@@ -66,13 +89,15 @@
 		23CD37001D6AD06300B4FDCE /* car3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car3.jpg; sourceTree = "<group>"; };
 		23CD37011D6AD06300B4FDCE /* car4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car4.jpg; sourceTree = "<group>"; };
 		94051C66D373B0AD2B6EA67F /* libPods-DriverShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DriverShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		981737F91D731F680099787D /* LastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastModel.h; sourceTree = "<group>"; };
+		981737FA1D731F680099787D /* LastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastModel.m; sourceTree = "<group>"; };
+		981737FD1D7328930099787D /* SinglePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePageViewController.h; sourceTree = "<group>"; };
+		981737FE1D7328930099787D /* SinglePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePageViewController.m; sourceTree = "<group>"; };
+		981738001D73289C0099787D /* SinglePageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SinglePageViewController.storyboard; sourceTree = "<group>"; };
 		981CEDAB1D69D400000EC30D /* DriverShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriverShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		981CEDAF1D69D400000EC30D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		981CEDB11D69D400000EC30D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		981CEDB21D69D400000EC30D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		981CEDB41D69D400000EC30D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		981CEDB51D69D400000EC30D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		981CEDB81D69D400000EC30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		981CEDBA1D69D400000EC30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		981CEDBD1D69D400000EC30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		981CEDBF1D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +107,28 @@
 		981CEDCF1D69D400000EC30D /* DriverShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriverShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		981CEDD31D69D400000EC30D /* DriverShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverShowUITests.m; sourceTree = "<group>"; };
 		981CEDD51D69D400000EC30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		986C59481D7149DE00B58572 /* CenterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterModel.h; sourceTree = "<group>"; };
+		986C59491D7149DE00B58572 /* CenterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterModel.m; sourceTree = "<group>"; };
+		986C594C1D716D5B00B58572 /* LeftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDetailViewController.h; sourceTree = "<group>"; };
+		986C594D1D716D5B00B58572 /* LeftDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDetailViewController.m; sourceTree = "<group>"; };
+		986C594F1D716D6A00B58572 /* LeftDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeftDetailViewController.storyboard; sourceTree = "<group>"; };
+		986C59511D71732900B58572 /* LeftDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDetailTableViewCell.h; sourceTree = "<group>"; };
+		986C59521D71732900B58572 /* LeftDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDetailTableViewCell.m; sourceTree = "<group>"; };
+		986C59541D7181E900B58572 /* ThridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThridModel.h; sourceTree = "<group>"; };
+		986C59551D7181E900B58572 /* ThridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThridModel.m; sourceTree = "<group>"; };
+		986C59581D71825100B58572 /* RightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightDetailViewController.h; sourceTree = "<group>"; };
+		986C59591D71825100B58572 /* RightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightDetailViewController.m; sourceTree = "<group>"; };
+		986C595B1D71825800B58572 /* RightDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RightDetailViewController.storyboard; sourceTree = "<group>"; };
+		986C595E1D719C8400B58572 /* DetailPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailPage.storyboard; sourceTree = "<group>"; };
+		986C59601D71A1D600B58572 /* DetailPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPageViewController.h; sourceTree = "<group>"; };
+		986C59611D71A1D600B58572 /* DetailPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPageViewController.m; sourceTree = "<group>"; };
+		986C59631D71A32000B58572 /* DesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesModel.h; sourceTree = "<group>"; };
+		986C59641D71A32000B58572 /* DesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesModel.m; sourceTree = "<group>"; };
+		986C59661D71D45100B58572 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		986C59671D71D45100B58572 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		98BE806C1D6C8E6100CB7611 /* CenterDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CenterDetail.storyboard; sourceTree = "<group>"; };
+		98BE806E1D6C8E8B00CB7611 /* CenterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterDetailViewController.h; sourceTree = "<group>"; };
+		98BE806F1D6C8E8B00CB7611 /* CenterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterDetailViewController.m; sourceTree = "<group>"; };
 		B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +167,25 @@
 				237986A11D6C621000509B39 /* NSString+Path.m */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		239F72E81D6DB2FF001069B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				239F72E91D6DB329001069B8 /* Starts.h */,
+				239F72EA1D6DB329001069B8 /* Starts.m */,
+				23AC8DCA1D7056DA00AB142F /* DetailCellModel.h */,
+				23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */,
+				986C59481D7149DE00B58572 /* CenterModel.h */,
+				986C59491D7149DE00B58572 /* CenterModel.m */,
+				986C59541D7181E900B58572 /* ThridModel.h */,
+				986C59551D7181E900B58572 /* ThridModel.m */,
+				986C59631D71A32000B58572 /* DesModel.h */,
+				986C59641D71A32000B58572 /* DesModel.m */,
+				981737F91D731F680099787D /* LastModel.h */,
+				981737FA1D731F680099787D /* LastModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		23CD36E91D6AC01B00B4FDCE /* Main */ = {
@@ -175,6 +241,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		981737FC1D7328650099787D /* SinglePage */ = {
+			isa = PBXGroup;
+			children = (
+				981737FD1D7328930099787D /* SinglePageViewController.h */,
+				981737FE1D7328930099787D /* SinglePageViewController.m */,
+				981738001D73289C0099787D /* SinglePageViewController.storyboard */,
+			);
+			name = SinglePage;
+			sourceTree = "<group>";
+		};
 		981CEDA21D69D400000EC30D = {
 			isa = PBXGroup;
 			children = (
@@ -200,13 +276,14 @@
 		981CEDAD1D69D400000EC30D /* DriverShow */ = {
 			isa = PBXGroup;
 			children = (
+				986C59571D71823200B58572 /* RightDetail */,
+				986C594B1D716D0700B58572 /* LeftDetail */,
+				239F72E81D6DB2FF001069B8 /* Model */,
+				98BE806B1D6C8E4B00CB7611 /* CenterDetail */,
 				237986931D6BE0A100509B39 /* Lib */,
 				23CD36E91D6AC01B00B4FDCE /* Main */,
 				981CEDB11D69D400000EC30D /* AppDelegate.h */,
 				981CEDB21D69D400000EC30D /* AppDelegate.m */,
-				981CEDB41D69D400000EC30D /* ViewController.h */,
-				981CEDB51D69D400000EC30D /* ViewController.m */,
-				981CEDB71D69D400000EC30D /* Main.storyboard */,
 				981CEDBA1D69D400000EC30D /* Assets.xcassets */,
 				981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */,
 				981CEDBF1D69D400000EC30D /* Info.plist */,
@@ -239,6 +316,54 @@
 				981CEDD51D69D400000EC30D /* Info.plist */,
 			);
 			path = DriverShowUITests;
+			sourceTree = "<group>";
+		};
+		986C594B1D716D0700B58572 /* LeftDetail */ = {
+			isa = PBXGroup;
+			children = (
+				986C594C1D716D5B00B58572 /* LeftDetailViewController.h */,
+				986C594D1D716D5B00B58572 /* LeftDetailViewController.m */,
+				986C594F1D716D6A00B58572 /* LeftDetailViewController.storyboard */,
+				986C59511D71732900B58572 /* LeftDetailTableViewCell.h */,
+				986C59521D71732900B58572 /* LeftDetailTableViewCell.m */,
+			);
+			name = LeftDetail;
+			sourceTree = "<group>";
+		};
+		986C59571D71823200B58572 /* RightDetail */ = {
+			isa = PBXGroup;
+			children = (
+				986C595D1D719C6C00B58572 /* DetailPage */,
+				986C59581D71825100B58572 /* RightDetailViewController.h */,
+				986C59591D71825100B58572 /* RightDetailViewController.m */,
+				986C595B1D71825800B58572 /* RightDetailViewController.storyboard */,
+			);
+			name = RightDetail;
+			sourceTree = "<group>";
+		};
+		986C595D1D719C6C00B58572 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				986C595E1D719C8400B58572 /* DetailPage.storyboard */,
+				986C59601D71A1D600B58572 /* DetailPageViewController.h */,
+				986C59611D71A1D600B58572 /* DetailPageViewController.m */,
+			);
+			name = DetailPage;
+			sourceTree = "<group>";
+		};
+		98BE806B1D6C8E4B00CB7611 /* CenterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				981737FC1D7328650099787D /* SinglePage */,
+				986C59661D71D45100B58572 /* CustomButton.h */,
+				986C59671D71D45100B58572 /* CustomButton.m */,
+				98BE806C1D6C8E6100CB7611 /* CenterDetail.storyboard */,
+				98BE806E1D6C8E8B00CB7611 /* CenterDetailViewController.h */,
+				98BE806F1D6C8E8B00CB7611 /* CenterDetailViewController.m */,
+				23AC8DC61D70517400AB142F /* DetailTableViewCell.h */,
+				23AC8DC71D70517400AB142F /* DetailTableViewCell.m */,
+			);
+			name = CenterDetail;
 			sourceTree = "<group>";
 		};
 		9B75CB9BA4223AC4DAAB29F9 /* Frameworks */ = {
@@ -319,7 +444,7 @@
 				TargetAttributes = {
 					981CEDAA1D69D400000EC30D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = HV5ET565XY;
+						DevelopmentTeam = 358B5J757A;
 					};
 					981CEDC31D69D400000EC30D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -356,14 +481,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981738011D73289C0099787D /* SinglePageViewController.storyboard in Resources */,
 				981CEDBE1D69D400000EC30D /* LaunchScreen.storyboard in Resources */,
 				23CD37051D6AD06300B4FDCE /* car4.jpg in Resources */,
 				23CD37031D6AD06300B4FDCE /* car2.jpg in Resources */,
 				23CD37021D6AD06300B4FDCE /* car1.jpg in Resources */,
+				986C59501D716D6A00B58572 /* LeftDetailViewController.storyboard in Resources */,
 				23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */,
 				981CEDBB1D69D400000EC30D /* Assets.xcassets in Resources */,
-				981CEDB91D69D400000EC30D /* Main.storyboard in Resources */,
+				986C595F1D719C8400B58572 /* DetailPage.storyboard in Resources */,
+				98BE806D1D6C8E6100CB7611 /* CenterDetail.storyboard in Resources */,
 				23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */,
+				986C595C1D71825800B58572 /* RightDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +565,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981CEDB61D69D400000EC30D /* ViewController.m in Sources */,
 				23CD36FC1D6ACEAC00B4FDCE /* HeadScrollView.m in Sources */,
 				23CD36F51D6AC5EE00B4FDCE /* WYCAdvert.m in Sources */,
+				239F72EB1D6DB329001069B8 /* Starts.m in Sources */,
+				986C59561D7181E900B58572 /* ThridModel.m in Sources */,
+				23AC8DC81D70517400AB142F /* DetailTableViewCell.m in Sources */,
+				986C594E1D716D5B00B58572 /* LeftDetailViewController.m in Sources */,
+				986C594A1D7149DE00B58572 /* CenterModel.m in Sources */,
 				23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */,
+				986C595A1D71825100B58572 /* RightDetailViewController.m in Sources */,
 				237986A31D6C621000509B39 /* NSString+Path.m in Sources */,
+				986C59531D71732900B58572 /* LeftDetailTableViewCell.m in Sources */,
+				986C59651D71A32000B58572 /* DesModel.m in Sources */,
 				981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */,
+				981737FF1D7328930099787D /* SinglePageViewController.m in Sources */,
 				237986A21D6C621000509B39 /* NetWorkTools.m in Sources */,
+				23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */,
 				23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */,
+				986C59681D71D45100B58572 /* CustomButton.m in Sources */,
+				98BE80701D6C8E8B00CB7611 /* CenterDetailViewController.m in Sources */,
+				981737FB1D731F680099787D /* LastModel.m in Sources */,
+				986C59621D71A1D600B58572 /* DetailPageViewController.m in Sources */,
 				981CEDB01D69D400000EC30D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,14 +622,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		981CEDB71D69D400000EC30D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				981CEDB81D69D400000EC30D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		981CEDBC1D69D400000EC30D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -586,11 +720,12 @@
 			baseConfigurationReference = 0C2151CBF06872B9D97D5323 /* Pods-DriverShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: beijing fangshan yancun Weipp (VYY5NY7995)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DriverShow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow;
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -602,11 +737,12 @@
 			baseConfigurationReference = B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: beijing fangshan yancun Weipp (VYY5NY7995)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DriverShow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow;
+				PRODUCT_BUNDLE_IDENTIFIER = wyc.DriverShow2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
