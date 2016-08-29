@@ -8,6 +8,15 @@
 
 #import "HomeViewController.h"
 #import "HeadScrollView.h"
+#import "NetWorkTools.h"
+#import "CenterDetailViewController.h"
+#import "MJExtension.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "CenterModel.h"
+#import "LeftDetailViewController.h"
+#import "RightDetailViewController.h"
+#import "ThridModel.h"
+
 
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 
@@ -17,15 +26,15 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *NavBar;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *LiftItem;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *RightItem;
 
+@property (weak, nonatomic) IBOutlet UIImageView *centerImg;
 
-@property (weak, nonatomic) IBOutlet UIView *centerContent;
+@property (weak, nonatomic) IBOutlet UIImageView *rightImg;
 
-@property (weak, nonatomic) IBOutlet UIView *leftFotter;
+@property (weak, nonatomic) IBOutlet UIImageView *leftImg;
 
-@property (weak, nonatomic) IBOutlet UIView *rightFotter;
-
+@property (nonatomic, strong) HeadScrollView *scrollView;
+@property (nonatomic, strong) NSArray *imgArr;
 
 @end
 
@@ -41,62 +50,243 @@
     title.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = title;
     
-    self.navigationItem.leftBarButtonItem.title = @"北京";
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-    
-    self.navigationItem.rightBarButtonItem.title = @"登录";
-    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
     
+    
+    UIBarButtonItem *bb = [[UIBarButtonItem alloc]initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(leftTouch)];
+    self.navigationItem.leftBarButtonItem = bb;
    
     
+    
+    
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+    
+    self.NavBar.title = @"";
+    
+    
+    
+    [self InitData];
     [self createInfiniteScrollView];
+    [self setViewImage];
+    
+    
+ 
+}
+-(void)leftTouch{
+    NSLog(@"嘿嘿嘿");
 }
 
--(void)addTextWithStr:(NSString *)str andTarget:(UIView *)target{
-    UILabel *lab = [[UILabel alloc]init];
-    
-    [lab setFrame:CGRectMake(target.frame.size.width / 4  , target.frame.size.height / 2 , 100, 30)];
 
-    
-    lab.text = str;
-    lab.textAlignment = NSTextAlignmentCenter;
-    lab.font = [UIFont systemFontOfSize:20];
-    lab.textColor = [UIColor whiteColor];
-    [target addSubview:lab];
+
+
+-(void)InitData2{
+    [[NetWorkTools sharedNetworkTools]POST:@"API/Car/onePage" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"失败:%@",error);
+    }];
 }
 
+-(void)setViewImage{
+    
+    [self.centerImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.onepic]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                            }
+     ];
+    
+    self.centerOneLab.text = self.startModel.result.oneename;
+    self.centerTwoLab.text = self.startModel.result.onecname;
+    self.leftOneLab.text = self.startModel.result.secondename;
+    self.leftTwoLab.text = self.startModel.result.secondcname;
+    self.rightOneLab.text = self.startModel.result.thirdename;
+    self.rightTwoLab.text = self.startModel.result.thirdcname;
+    
+    [self.leftImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.secondpic]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                             }
+     ];
+    [self.rightImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.thirdpic]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                             }
+     ];
+    
+}
+
+
+-(void)InitData{
+    NSString *urlStr = @"http://muxinzuche.com/API/Car/onePage";
+    
+    NSData *resultData = [self asyndNetRequest:urlStr];
+    [Starts mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"Result":@"result"
+                 };
+    }];
+    Starts *start = [Starts mj_objectWithKeyValues:resultData];
+    self.startModel = start;
+}
+
+-(NSData *)asyndNetRequest:(NSString *)urlStr{
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *urlrequest = [[NSMutableURLRequest alloc]initWithURL:url];
+    urlrequest.HTTPMethod = @"GET";
+    
+    
+    
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:urlrequest returningResponse:&response error:&error];
+    if (error == nil) {//成功
+        return data;
+    }else{
+        NSLog(@"错误:%@",error);
+        return nil;
+    }
+}
 
 //创建顶部的轮播图
 - (void)createInfiniteScrollView {
     
     //44
-    HeadScrollView *scrollView = [[HeadScrollView alloc] init];
-    scrollView.frame = CGRectMake(0,64, kDeviceWidth, 250 );
-    scrollView.images = @[
-                          [UIImage imageNamed:@"car1.jpg"],
-                          [UIImage imageNamed:@"car2.jpg"],
-                          [UIImage imageNamed:@"car3.jpg"],
-                          [UIImage imageNamed:@"car4.jpg"],
-                          ];
-    scrollView.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
-    scrollView.pageControl.pageIndicatorTintColor = [UIColor grayColor];
-    scrollView.delegate = self;
-    [self.view addSubview:scrollView];
+    self.scrollView = [[HeadScrollView alloc] init];
+    
+    self.scrollView.frame = CGRectMake(0,64, kDeviceWidth, 250 );
+    self.scrollView.images = self.startModel.result.banner;
+    self.scrollView.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
+    self.scrollView.pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    self.scrollView.delegate = self;
+    [self.view addSubview:self.scrollView];
 }
 
 
 #pragma mark - HeadScrollViewDelegate -
-#warning 如果不想实现直接去掉此方法即可
+// 如果不想实现直接去掉此方法即可
 - (void)ScrollViewDidClickAtAnyImageView:(UIImageView *)imageView {
     
     NSLog(@"%ld --  %@",imageView.tag, imageView.image);
+}
+
+//centerView Click
+- (IBAction)centerBtnClick:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CenterDetail" bundle:nil];
+    CenterDetailViewController *vc = sb.instantiateInitialViewController;
+
+    NSDictionary *parameters = @{@"receive":@"first"};
+    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"result":@"Resultt",
+                     };
+        }];
+        
+        CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+        
+        vc.centerModel = centerModel;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"失败:%@",error);
+    }];
     
 }
+
+- (IBAction)leftBtnClick:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LeftDetailViewController" bundle:nil];
+    LeftDetailViewController *vc = sb.instantiateInitialViewController;
+    NSDictionary *parameters = @{@"receive":@"second"};
+    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"result":@"Resultt",
+                     };
+        }];
+        
+        CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+        vc.centerModel = centerModel;
+        
+        
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"失败:%@",error);
+    }];
+    
+    
+    
+}
+
+
+- (IBAction)rightBtnClick:(id)sender {
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RightDetailViewController" bundle:nil];
+    RightDetailViewController *vc = sb.instantiateInitialViewController;
+    
+    NSDictionary *parameters = @{@"receive":@"third"};
+    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+       
+        
+        [ThridData mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"kind":@"kind",
+                     };
+        }];
+        
+        ThridData *thridData = [ThridData mj_objectWithKeyValues:responseObject];
+        vc.thridData = thridData;
+        
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"失败:%@",error);
+    }];
+}
+
+
+
+
+#pragma mark  lazy
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
 
 /*
 #pragma mark - Navigation

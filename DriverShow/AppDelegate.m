@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "WYCAdvert.h"
 #import "DriverMainViewController.h"
+#import "NetWorkTools.h"
+#import "Starts.h"
+#import "MJExtension.h"
 
 @interface AppDelegate ()
 
@@ -23,10 +26,12 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     [self.window setBackgroundColor:[UIColor whiteColor]];
+   
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"DriverMain" bundle:nil];
     
     DriverMainViewController *vc = sb.instantiateInitialViewController;
+
     
     self.window.rootViewController = vc;
     
@@ -35,9 +40,14 @@
     
 //    [self setAdvert];
     
-    
     return YES;
+    
 }
+
+
+
+
+
 /**
  *  设置启动图片
  */
