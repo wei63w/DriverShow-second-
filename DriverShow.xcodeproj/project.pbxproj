@@ -720,7 +720,7 @@
 			baseConfigurationReference = 0C2151CBF06872B9D97D5323 /* Pods-DriverShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: beijing fangshan yancun Weipp (VYY5NY7995)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DriverShow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -737,7 +737,7 @@
 			baseConfigurationReference = B3404EDAE1DEC0943DC45C79 /* Pods-DriverShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: beijing fangshan yancun Weipp (VYY5NY7995)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DriverShow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
