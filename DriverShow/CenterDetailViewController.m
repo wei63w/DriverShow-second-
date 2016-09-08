@@ -13,6 +13,7 @@
 #import "NetWorkTools.h"
 #import "LastModel.h"
 #import "SinglePageViewController.h"
+#import "MJRefresh.h"
 
 
 @interface CenterDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
@@ -32,14 +33,16 @@
 @implementation CenterDetailViewController
 
 - (void)viewDidLoad {
-    
-    
-    
-    
-    
-    
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    //去除cell边框线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
     self.isShow = NO;
     self.selectedIndex = 0;
     self.tableView.delegate = self;
@@ -48,7 +51,63 @@
     [self resetTitle:@"全部车型"];
     
     [self setLeftBarButtonItem];
+    [self setRightBarButtonItem];
+    
+    
+    //setRefresh
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    
+    /**
+     *  下拉刷新
+     */
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
+        
+    }];
+    /**
+     *  上拉刷新
+     */
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        // 结束刷新
+        [self.tableView.mj_footer endRefreshing];
+    }];
+    
+    [self.tableView.mj_header beginRefreshing];
+    
 }
+-(void)loadNewData{
+    NSDictionary *parameters = @{@"receive":@"first"};
+    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+        
+        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                     @"result":@"Resultt",
+                     };
+        }];
+        
+        self.centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+      
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"失败:%@",error);
+    }];
+    
+    
+}
+
+
+
+
 -(void)setLeftBarButtonItem{
     // need delegate can right swipe -->UIGestureRecognizerDelegate
     
@@ -66,7 +125,13 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
 }
-
+-(void)setRightBarButtonItem{
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 44, 44);
+    [rightBtn setImage:[UIImage imageNamed:@"logo"] forState:UIControlStateNormal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
 
 
 -(void)doBack:(id)sender

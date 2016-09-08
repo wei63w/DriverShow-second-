@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:1/255.0 alpha:1];
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
     title.text = @"首页";
     title.textAlignment = NSTextAlignmentCenter;
@@ -193,17 +193,7 @@
         CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
         
         vc.centerModel = centerModel;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         [self.navigationController pushViewController:vc animated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

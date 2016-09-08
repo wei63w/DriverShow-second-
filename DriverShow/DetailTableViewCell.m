@@ -45,6 +45,13 @@
     self.toWay.textColor =[UIColor whiteColor];
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    
+    
+    [self setBackgroundColor:[UIColor clearColor]];
+    self.textLabel.backgroundColor = [UIColor clearColor];
+    self.detailTextLabel.backgroundColor = [UIColor clearColor];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
