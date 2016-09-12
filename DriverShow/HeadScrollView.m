@@ -162,7 +162,7 @@ static int const ImageViewCount = 3;
         NSString *imgStr = self.images[index];
         
         [imageView sd_setImageWithURL:[NSURL URLWithString:imgStr]
-                          placeholderImage:[UIImage imageNamed:@"placeholder"]
+                          placeholderImage:[UIImage imageNamed:@"defaultPic"]
                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                  }
          ];

@@ -72,7 +72,7 @@
     
     
     [self.bgView sd_setImageWithURL:[NSURL URLWithString:model.imgStr]
-                 placeholderImage:[UIImage imageNamed:@"placeholder"]
+                 placeholderImage:[UIImage imageNamed:@"defaultPic"]
                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                         }
      ];

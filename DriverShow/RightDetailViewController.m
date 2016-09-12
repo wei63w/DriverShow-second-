@@ -41,13 +41,7 @@
     title.textAlignment = NSTextAlignmentCenter;
     title.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = title;
-    
-    
-//    for (id item in self.thridData.result.kind) {
-//        
-//        ThridModel *model =[ThridModel mj_objectWithKeyValues:item];
-//        
-//    }
+    [self setLeftBarButtonItem];
  
     [self loadData:self.one andCurrentIndex:0];
     [self loadData:self.two andCurrentIndex:1];
@@ -73,6 +67,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
 }
+
 -(void)doBack:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -90,7 +85,7 @@
           
             
             [item sd_setImageWithURL:[NSURL URLWithString:model.pic]
-                    placeholderImage:[UIImage imageNamed:@"placeholder"]
+                    placeholderImage:[UIImage imageNamed:@"defaultPic"]
                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                            }
              ];

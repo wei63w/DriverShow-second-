@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236D24EA1D865BAB000312BD /* LeftSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D24E91D865BAB000312BD /* LeftSingleViewController.m */; };
+		236D24EC1D865BB9000312BD /* LeftSingleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236D24EB1D865BB9000312BD /* LeftSingleViewController.storyboard */; };
+		236D24EF1D8675E8000312BD /* LeftSingleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D24EE1D8675E8000312BD /* LeftSingleModel.m */; };
 		237986A21D6C621000509B39 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2379869F1D6C621000509B39 /* NetWorkTools.m */; };
 		237986A31D6C621000509B39 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 237986A11D6C621000509B39 /* NSString+Path.m */; };
 		239F72EB1D6DB329001069B8 /* Starts.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F72EA1D6DB329001069B8 /* Starts.m */; };
 		23AC8DC81D70517400AB142F /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DC71D70517400AB142F /* DetailTableViewCell.m */; };
 		23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */; };
+		23C659261D811093009014DF /* SeriaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C659251D811093009014DF /* SeriaceModel.m */; };
 		23CD36EB1D6AC02900B4FDCE /* DriverMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */; };
 		23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */; };
 		23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CD36F01D6AC19A00B4FDCE /* HomeViewController.m */; };
@@ -65,6 +69,11 @@
 
 /* Begin PBXFileReference section */
 		0C2151CBF06872B9D97D5323 /* Pods-DriverShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DriverShow/Pods-DriverShow.debug.xcconfig"; sourceTree = "<group>"; };
+		236D24E81D865BAB000312BD /* LeftSingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSingleViewController.h; sourceTree = "<group>"; };
+		236D24E91D865BAB000312BD /* LeftSingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSingleViewController.m; sourceTree = "<group>"; };
+		236D24EB1D865BB9000312BD /* LeftSingleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeftSingleViewController.storyboard; sourceTree = "<group>"; };
+		236D24ED1D8675E8000312BD /* LeftSingleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSingleModel.h; sourceTree = "<group>"; };
+		236D24EE1D8675E8000312BD /* LeftSingleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSingleModel.m; sourceTree = "<group>"; };
 		2379869E1D6C621000509B39 /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTools.h; sourceTree = "<group>"; };
 		2379869F1D6C621000509B39 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
 		237986A01D6C621000509B39 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
@@ -75,6 +84,8 @@
 		23AC8DC71D70517400AB142F /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		23AC8DCA1D7056DA00AB142F /* DetailCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCellModel.h; sourceTree = "<group>"; };
 		23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCellModel.m; sourceTree = "<group>"; };
+		23C659241D811093009014DF /* SeriaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeriaceModel.h; sourceTree = "<group>"; };
+		23C659251D811093009014DF /* SeriaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriaceModel.m; sourceTree = "<group>"; };
 		23CD36EA1D6AC02900B4FDCE /* DriverMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DriverMain.storyboard; sourceTree = "<group>"; };
 		23CD36EC1D6AC06800B4FDCE /* DriverMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverMainViewController.h; sourceTree = "<group>"; };
 		23CD36ED1D6AC06800B4FDCE /* DriverMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverMainViewController.m; sourceTree = "<group>"; };
@@ -158,6 +169,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236D24E71D865B88000312BD /* SinglePage */ = {
+			isa = PBXGroup;
+			children = (
+				236D24E81D865BAB000312BD /* LeftSingleViewController.h */,
+				236D24E91D865BAB000312BD /* LeftSingleViewController.m */,
+				236D24EB1D865BB9000312BD /* LeftSingleViewController.storyboard */,
+			);
+			name = SinglePage;
+			sourceTree = "<group>";
+		};
 		237986931D6BE0A100509B39 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +205,10 @@
 				986C59641D71A32000B58572 /* DesModel.m */,
 				981737F91D731F680099787D /* LastModel.h */,
 				981737FA1D731F680099787D /* LastModel.m */,
+				23C659241D811093009014DF /* SeriaceModel.h */,
+				23C659251D811093009014DF /* SeriaceModel.m */,
+				236D24ED1D8675E8000312BD /* LeftSingleModel.h */,
+				236D24EE1D8675E8000312BD /* LeftSingleModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -321,6 +346,7 @@
 		986C594B1D716D0700B58572 /* LeftDetail */ = {
 			isa = PBXGroup;
 			children = (
+				236D24E71D865B88000312BD /* SinglePage */,
 				986C594C1D716D5B00B58572 /* LeftDetailViewController.h */,
 				986C594D1D716D5B00B58572 /* LeftDetailViewController.m */,
 				986C594F1D716D6A00B58572 /* LeftDetailViewController.storyboard */,
@@ -493,6 +519,7 @@
 				98BE806D1D6C8E6100CB7611 /* CenterDetail.storyboard in Resources */,
 				23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */,
 				986C595C1D71825800B58572 /* RightDetailViewController.storyboard in Resources */,
+				236D24EC1D865BB9000312BD /* LeftSingleViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,8 +601,10 @@
 				986C594A1D7149DE00B58572 /* CenterModel.m in Sources */,
 				23CD36EE1D6AC06800B4FDCE /* DriverMainViewController.m in Sources */,
 				986C595A1D71825100B58572 /* RightDetailViewController.m in Sources */,
+				236D24EA1D865BAB000312BD /* LeftSingleViewController.m in Sources */,
 				237986A31D6C621000509B39 /* NSString+Path.m in Sources */,
 				986C59531D71732900B58572 /* LeftDetailTableViewCell.m in Sources */,
+				236D24EF1D8675E8000312BD /* LeftSingleModel.m in Sources */,
 				986C59651D71A32000B58572 /* DesModel.m in Sources */,
 				981CEDB31D69D400000EC30D /* AppDelegate.m in Sources */,
 				981737FF1D7328930099787D /* SinglePageViewController.m in Sources */,
@@ -587,6 +616,7 @@
 				981737FB1D731F680099787D /* LastModel.m in Sources */,
 				986C59621D71A1D600B58572 /* DetailPageViewController.m in Sources */,
 				981CEDB01D69D400000EC30D /* main.m in Sources */,
+				23C659261D811093009014DF /* SeriaceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

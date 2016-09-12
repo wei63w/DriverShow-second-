@@ -87,7 +87,7 @@
 - (IBAction)btnTouch:(id)sender {
     
     
-    NSMutableString *str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"15110223870"];
+    NSMutableString *str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"18611983873"];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
     
 }

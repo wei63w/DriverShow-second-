@@ -94,7 +94,7 @@
 -(void)setViewImage{
     
     [self.centerImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.onepic]
-                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                      placeholderImage:[UIImage imageNamed:@"defaultPic"]
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                             }
      ];
@@ -107,12 +107,12 @@
     self.rightTwoLab.text = self.startModel.result.thirdcname;
     
     [self.leftImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.secondpic]
-                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                      placeholderImage:[UIImage imageNamed:@"defaultPic"]
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                              }
      ];
     [self.rightImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.thirdpic]
-                      placeholderImage:[UIImage imageNamed:@"placeholder"]
+                      placeholderImage:[UIImage imageNamed:@"defaultPic"]
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                              }
      ];
@@ -179,54 +179,54 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CenterDetail" bundle:nil];
     CenterDetailViewController *vc = sb.instantiateInitialViewController;
 
-    NSDictionary *parameters = @{@"receive":@"first"};
-    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
-            return @{
-                     @"result":@"Resultt",
-                     };
-        }];
-        
-        CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
-        
-        vc.centerModel = centerModel;
+//    NSDictionary *parameters = @{@"receive":@"first"};
+//    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
+//            return @{
+//                     @"result":@"Resultt",
+//                     };
+//        }];
+    
+//        CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+    
+        vc.centerModel = nil;//centerModel;
 
         [self.navigationController pushViewController:vc animated:YES];
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"失败:%@",error);
-    }];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//        NSLog(@"失败:%@",error);
+//    }];
     
 }
 
 - (IBAction)leftBtnClick:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LeftDetailViewController" bundle:nil];
     LeftDetailViewController *vc = sb.instantiateInitialViewController;
-    NSDictionary *parameters = @{@"receive":@"second"};
-    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
-            return @{
-                     @"result":@"Resultt",
-                     };
-        }];
-        
-        CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
-        vc.centerModel = centerModel;
+//    NSDictionary *parameters = @{@"receive":@"second"};
+//    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
+//            return @{
+//                     @"result":@"Resultt",
+//                     };
+//        }];
+//        
+//        CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+        vc.centerModel = nil;// centerModel;
         
         
         [self.navigationController pushViewController:vc animated:YES];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"失败:%@",error);
-    }];
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//        NSLog(@"失败:%@",error);
+//    }];
     
     
     

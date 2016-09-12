@@ -14,6 +14,7 @@
 #import "LastModel.h"
 #import "SinglePageViewController.h"
 #import "MJRefresh.h"
+#import "MBProgressHUD.h"
 
 
 @interface CenterDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
@@ -27,6 +28,20 @@
 @property (nonatomic, assign) BOOL isShow;
 
 @property (nonatomic, strong) NSArray<Car *> *carLis;
+
+/**
+ *  页码
+ */
+@property (nonatomic, assign) NSInteger page;
+/**
+ *  是否排序  1,2 升序,降序
+ */
+@property (nonatomic, assign) NSInteger sort;
+/**
+ *  系列Id
+ */
+@property (nonatomic, assign) NSInteger brand;
+
 
 @end
 
@@ -53,6 +68,9 @@
     [self setLeftBarButtonItem];
     [self setRightBarButtonItem];
     
+    self.page  = 0;
+    self.sort = 1;
+    self.brand = 0;
     
     //setRefresh
     MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
@@ -65,6 +83,9 @@
      *  下拉刷新
      */
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+
+        
+        [self updateItemCellandPage:0 andSort:self.sort andBrand:self.brand];
         // 结束刷新
         [self.tableView.mj_header endRefreshing];
         
@@ -73,40 +94,20 @@
      *  上拉刷新
      */
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 结束刷新
-        [self.tableView.mj_footer endRefreshing];
+        
+        self.page ++;
+        
+        [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
+        
     }];
     
     [self.tableView.mj_header beginRefreshing];
     
 }
 -(void)loadNewData{
-    NSDictionary *parameters = @{@"receive":@"first"};
-    [[NetWorkTools sharedNetworkTools]GET:@"API/Car/receiveData" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //结束刷新
-        [self.tableView.mj_header endRefreshing];
-        
-        [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
-            return @{
-                     @"result":@"Resultt",
-                     };
-        }];
-        
-        self.centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
-      
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"失败:%@",error);
-    }];
-    
+    [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
     
 }
-
-
-
 
 -(void)setLeftBarButtonItem{
     // need delegate can right swipe -->UIGestureRecognizerDelegate
@@ -125,12 +126,26 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
 }
+
 -(void)setRightBarButtonItem{
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.frame = CGRectMake(0, 0, 44, 44);
-    [rightBtn setImage:[UIImage imageNamed:@"logo"] forState:UIControlStateNormal];
+    rightBtn.frame = CGRectMake(0, 0, 24, 28);
+    [rightBtn addTarget:self action:@selector(rightBarTouch) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setImage:[UIImage imageNamed:@"rightBarBg"] forState:UIControlStateNormal];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
+}
+/**
+ *  排序
+ */
+-(void)rightBarTouch{
+    if (self.sort == 1) {
+        self.sort = 2;
+    }else{
+        self.sort = 1;
+    }
+//   [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 
@@ -230,31 +245,64 @@
     [tempTitleView addSubview:imgv];
     self.navigationItem.titleView = tempTitleView;
 }
-
-
+/**
+ *  下拉刷新cell
+ */
+-(void)updateItemCellandPage:(NSInteger)page andSort:(NSInteger)sort andBrand:(NSInteger)brand{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        NSDictionary *parameters = @{@"page":@(page),@"sort":@(sort),@"brand":@(brand)};
+        [[NetWorkTools sharedNetworkTools]GET:@"API/Car/rentList" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            [CenterModel mj_setupObjectClassInArray:^NSDictionary *{
+                return @{
+                         @"result":@"Resultt",
+                         };
+            }];
+            
+           CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+            NSLog(@"%@",centerModel.result.car);
+            if ([centerModel.status isEqualToString:@"-1"]) {
+                //没有更多数据了
+                [self.tableView.mj_footer setState:MJRefreshStateNoMoreData];
+                return;
+            }else{
+                self.centerModel = centerModel;
+                self.page = page;
+                self.sort = sort;
+                self.brand = brand;
+                [self.tableView reloadData];
+                // 结束刷新
+                [self.tableView.mj_footer endRefreshing];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            NSLog(@"失败:%@",error);
+        }];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+}
 
 //选中标题系列
 -(void)chooseSeriase:(id)btn{
-    CustomButton *tempBtn = (CustomButton *)btn;
     
+    CustomButton *tempBtn = (CustomButton *)btn;
     //重新设置标题 tempBtn.brandName
     [self resetTitle:tempBtn.brandName];
     
-    
-    
-    
     self.selectedIndex = tempBtn.tag;
     self.selectedBandId = tempBtn.brandid;
-    NSMutableArray<Car *> *tempLis = [NSMutableArray arrayWithCapacity:10];
     
-    for (Car *model in self.centerModel.result.car) {
-        Car *tempModel = [Car mj_objectWithKeyValues:model];
-        if (tempBtn.brandid == [tempModel.carbrand intValue]) {
-            [tempLis addObject:tempModel];
-        }
-    }
-    self.carLis = tempLis;
-    [self.tableView reloadData];
+    self.page = 0;
+    self.sort = 1;
+    self.brand = tempBtn.brandid;
+    [self.tableView.mj_header beginRefreshing];
     self.isShow = NO;
     [self.maskView removeFromSuperview];
 }
@@ -263,19 +311,9 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (self.selectedBandId == 0 || self.selectedBandId == 1) {
-        return self.centerModel.result.car.count;
-    }else{
-        NSInteger temIndex = 0;
-        for (Car *model in _carLis) {
-            Car *tempModel = [Car mj_objectWithKeyValues:model];
-            if (self.selectedBandId == [tempModel.carbrand intValue]) {
-                temIndex ++;
-            }
-        }
-        
-        return temIndex;
-    }
+    
+    return self.centerModel.result.car.count;
+    
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
@@ -288,9 +326,8 @@
                   @"carbrand":@"brand"
                   };
      }];
-    if (self.selectedBandId == 0 || self.selectedBandId == 1) {
-        _carLis = self.centerModel.result.car;
-    }
+    
+    _carLis = self.centerModel.result.car;
     
     Car *tempCar = [Car mj_objectWithKeyValues:_carLis[indexPath.row]];
     
