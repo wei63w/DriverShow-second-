@@ -8,7 +8,7 @@
 
 #import "DriverMainViewController.h"
 
-
+#import "HomeViewController.h"
 
 @interface DriverMainViewController ()
 
@@ -19,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"DriverMain" bundle:nil];
+    HomeViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    
+    
+    
     
 //    self.navigationController.navigationBar.backgroundColor = [UIColor blueColor];
 //    self.navigationBar.backgroundColor = [UIColor blackColor];

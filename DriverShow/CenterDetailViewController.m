@@ -29,6 +29,9 @@
 
 @property (nonatomic, strong) NSArray<Car *> *carLis;
 
+@property (nonatomic, strong) NSMutableArray<Car *> *tbData;
+
+
 /**
  *  页码
  */
@@ -42,6 +45,7 @@
  */
 @property (nonatomic, assign) NSInteger brand;
 
+@property (nonatomic, assign) BOOL isUpPull;
 
 @end
 
@@ -56,6 +60,7 @@
     
     //去除cell边框线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     
     
     self.isShow = NO;
@@ -83,9 +88,12 @@
      *  下拉刷新
      */
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-
         
-        [self updateItemCellandPage:0 andSort:self.sort andBrand:self.brand];
+        self.isUpPull = NO;
+        //每次下拉刷新清空上拉加载数据
+        self.tbData = [NSMutableArray arrayWithCapacity:10];
+        
+        [self updateItemCellandPage:0 andSort:self.sort andBrand:self.brand andIsUpPull:NO];
         // 结束刷新
         [self.tableView.mj_header endRefreshing];
         
@@ -96,8 +104,8 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         
         self.page ++;
-        
-        [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
+        self.isUpPull = YES;
+        [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand andIsUpPull:YES];
         
     }];
     
@@ -105,7 +113,7 @@
     
 }
 -(void)loadNewData{
-    [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
+    [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand andIsUpPull:NO];
     
 }
 
@@ -248,7 +256,7 @@
 /**
  *  下拉刷新cell
  */
--(void)updateItemCellandPage:(NSInteger)page andSort:(NSInteger)sort andBrand:(NSInteger)brand{
+-(void)updateItemCellandPage:(NSInteger)page andSort:(NSInteger)sort andBrand:(NSInteger)brand andIsUpPull:(BOOL)isUpPull{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         // Do something...
@@ -262,9 +270,13 @@
                          @"result":@"Resultt",
                          };
             }];
+           
+            CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
             
-           CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
-            NSLog(@"%@",centerModel.result.car);
+            if (isUpPull) {//如果是下拉刷新 数据拼接上去
+                [self.tbData addObjectsFromArray:self.centerModel.result.car];
+                [self.tbData addObjectsFromArray:centerModel.result.car];
+            }
             if ([centerModel.status isEqualToString:@"-1"]) {
                 //没有更多数据了
                 [self.tableView.mj_footer setState:MJRefreshStateNoMoreData];
@@ -312,6 +324,9 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
+    if (self.isUpPull) {
+        return self.tbData.count;
+    }
     return self.centerModel.result.car.count;
     
 }
@@ -327,7 +342,12 @@
                   };
      }];
     
-    _carLis = self.centerModel.result.car;
+    if (self.isUpPull) {
+        _carLis = self.tbData;
+    }else{
+        _carLis = self.centerModel.result.car;
+    }
+    
     
     Car *tempCar = [Car mj_objectWithKeyValues:_carLis[indexPath.row]];
     
@@ -355,12 +375,15 @@ NSDictionary *parameterss;
                  @"carbrand":@"brand"
                  };
     }];
-     Car *tempCar = [Car mj_objectWithKeyValues:_carLis[indexPath.row]];
-     NSLog(@"%@",tempCar.carbrand);
+    Car *tempCar;
+    if (_isUpPull) {
+        tempCar =  [Car mj_objectWithKeyValues:_tbData[indexPath.row]];
+    }else{
+      tempCar = [Car mj_objectWithKeyValues:_carLis[indexPath.row]];
+    }
+    //要用carid 是brandid
+    parameterss = @{@"id":tempCar.carid};
     
-    parameterss = @{@"id":@"39"};
-    
-    NSLog(@"%@",parameterss);
     [[NetWorkTools sharedNetworkTools]GET:@"API/Car/rentDetail" parameters:parameterss progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -374,7 +397,11 @@ NSDictionary *parameterss;
                      @"result":@"LastModel",
                      };
         }];
-        LastData *lastdata = [LastData mj_objectWithKeyValues:responseObject];;
+        LastData *lastdata = [LastData mj_objectWithKeyValues:responseObject];
+
+        if ([lastdata.status isEqualToString:@"-1"]) {
+            [self ErrorCustomAlert:@"暂时无改数据,请稍后重试..."];
+        }
         
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SinglePageViewController" bundle:nil];
         SinglePageViewController *vc = sb.instantiateInitialViewController;
@@ -384,7 +411,7 @@ NSDictionary *parameterss;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-    
+        [self ErrorCustomAlert:@"服务器暂无数据,请稍后重试..."];
         NSLog(@"失败:%@",error);
     }];
     
@@ -394,7 +421,15 @@ NSDictionary *parameterss;
 }
 
 
-
+-(void)ErrorCustomAlert:(NSString *)errorStr{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:errorStr preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okaction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okaction];
+    [self presentViewController:alertController animated:YES completion:^{
+        return ;
+        
+    }];
+}
 
 
 

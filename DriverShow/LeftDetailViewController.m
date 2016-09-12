@@ -40,6 +40,11 @@
  */
 @property (nonatomic, assign) NSInteger brand;
 
+
+@property (nonatomic, strong) NSMutableArray<Car *> *tbData;
+
+@property (nonatomic, assign) BOOL isUpPull;
+
 @end
 
 @implementation LeftDetailViewController
@@ -75,8 +80,10 @@
      */
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
-        NSLog(@"%ld",self.brand);
-        [self updateItemCellandPage:0 andSort:self.sort andBrand:self.brand];
+        self.tbData = [NSMutableArray arrayWithCapacity:5];
+        self.isUpPull = NO;
+        
+        [self updateItemCellandPage:0 andSort:self.sort andBrand:self.brand andIsUpPull:NO];
         // 结束刷新
         [self.tableView.mj_header endRefreshing];
         
@@ -87,8 +94,8 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         
         self.page ++;
-        
-        [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
+        self.isUpPull = YES;
+        [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand andIsUpPull:YES];
         
     }];
     
@@ -225,13 +232,13 @@
 
 
 -(void)loadNewData{
-    [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand];
+    [self updateItemCellandPage:self.page andSort:self.sort andBrand:self.brand andIsUpPull:NO];
     
 }
 /**
  *  下拉刷新cell
  */
--(void)updateItemCellandPage:(NSInteger)page andSort:(NSInteger)sort andBrand:(NSInteger)brand{
+-(void)updateItemCellandPage:(NSInteger)page andSort:(NSInteger)sort andBrand:(NSInteger)brand andIsUpPull:(BOOL)isUpPull{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         // Do something...
@@ -253,7 +260,13 @@
                 [self.tableView.mj_footer setState:MJRefreshStateNoMoreData];
                 return;
             }else{
-                self.centerModel = centerModel;
+                if (isUpPull) {
+                    [self.tbData addObjectsFromArray:self.centerModel.result.car];
+                    [self.tbData addObjectsFromArray:centerModel.result.car];
+                }else{
+                    self.centerModel = centerModel;
+                }
+                
                 self.page = page;
                 self.sort = sort;
                 self.brand = brand;
@@ -263,7 +276,6 @@
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-            NSLog(@"失败:%@",error);
         }];
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -314,11 +326,13 @@
                  @"carbrand":@"brand"
                  };
     }];
-    
-    Car *tempCar = [Car mj_objectWithKeyValues:self.centerModel.result.car[indexPath.row]];
-    
-    
-    
+    Car *tempCar;
+    if (_isUpPull) {
+        tempCar = [Car mj_objectWithKeyValues:self.tbData[indexPath.row]];
+    }else{
+        tempCar = [Car mj_objectWithKeyValues:self.centerModel.result.car[indexPath.row]];
+    }
+
     DetailCellModel *model = [[DetailCellModel alloc]init];
     model.imgStr = tempCar.pic;
     model.carName = tempCar.carname;
@@ -329,8 +343,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Car *tempCar;
+    if (_isUpPull) {
+        tempCar = [Car mj_objectWithKeyValues:self.tbData[indexPath.row]];
+    }else{
+        tempCar = [Car mj_objectWithKeyValues:self.centerModel.result.car[indexPath.row]];
+    }
     
-    Car *tempCar = [Car mj_objectWithKeyValues:self.centerModel.result.car[indexPath.row]];
     DetailCellModel *model = [[DetailCellModel alloc]init];
     model.imgStr = tempCar.pic;
     model.carName = tempCar.carname;
@@ -339,8 +358,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         // Do something...
-        NSLog(@"%@",tempCar.carbrand);
-        NSDictionary *parameters = @{@"id":tempCar.carbrand};
+        NSDictionary *parameters = @{@"id":tempCar.carid};
         [[NetWorkTools sharedNetworkTools]GET:@"API/Car/weddingDetail" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -381,7 +399,7 @@
         
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-            NSLog(@"失败:%@",error);
+            [self ErrorCustomAlert:@"暂无数据,请稍后重试"];
         }];
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -391,6 +409,16 @@
 
     
     
+}
+
+-(void)ErrorCustomAlert:(NSString *)errorStr{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:errorStr preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okaction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okaction];
+    [self presentViewController:alertController animated:YES completion:^{
+        return ;
+        
+    }];
 }
 
 

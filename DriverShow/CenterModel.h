@@ -16,7 +16,9 @@
 @end
 
 @interface Car:NSObject
+//要用carid 是brandid
 @property (nonatomic, copy) NSString *carid;
+
 @property (nonatomic, copy) NSString *carbrand;
 @property (nonatomic, copy) NSString *isdiscount;
 @property (nonatomic, copy) NSString *carname;

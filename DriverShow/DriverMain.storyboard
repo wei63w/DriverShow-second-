@@ -33,23 +33,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Cj-1hF" userLabel="centerview">
-                                <rect key="frame" x="0.0" y="271" width="600" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-Cj-1hF" userLabel="centerview">
+                                <rect key="frame" x="0.0" y="314" width="600" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aAE-lz-ELN">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                         <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="30"/>
                                         </variation>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o80-Cg-ZTd" userLabel="centerBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                         <connections>
                                             <action selector="centerBtnClick:" destination="UgN-rf-v32" eventType="touchUpInside" id="Rjf-P3-YRK"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qb-dB-Rh7" userLabel="centerOne">
-                                        <rect key="frame" x="0.0" y="90" width="600" height="30"/>
+                                        <rect key="frame" x="0.0" y="65" width="600" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ljf-hg-obg"/>
@@ -83,7 +83,7 @@
                                     <constraint firstItem="O7w-bG-fUD" firstAttribute="width" secondItem="8Qb-dB-Rh7" secondAttribute="width" id="VRu-NL-s0H"/>
                                     <constraint firstItem="o80-Cg-ZTd" firstAttribute="leading" secondItem="POM-Cj-1hF" secondAttribute="leading" id="W3x-rF-qDy"/>
                                     <constraint firstItem="aAE-lz-ELN" firstAttribute="leading" secondItem="POM-Cj-1hF" secondAttribute="leading" id="ZyF-17-d4O"/>
-                                    <constraint firstAttribute="height" constant="250" id="fSB-R7-RsZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="fSB-R7-RsZ"/>
                                     <constraint firstItem="aAE-lz-ELN" firstAttribute="top" secondItem="POM-Cj-1hF" secondAttribute="top" id="g7P-VD-0uv"/>
                                     <constraint firstItem="o80-Cg-ZTd" firstAttribute="top" secondItem="POM-Cj-1hF" secondAttribute="top" id="hqq-6g-4cG"/>
                                     <constraint firstItem="O7w-bG-fUD" firstAttribute="top" secondItem="8Qb-dB-Rh7" secondAttribute="bottom" constant="19" id="oiO-1d-L8R"/>
@@ -94,8 +94,8 @@
                                     <rect key="frame" x="0.0" y="315" width="400" height="30"/>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-zL-hBw" userLabel="rightview">
-                                <rect key="frame" x="300" y="521" width="300" height="79"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-zL-hBw" userLabel="rightview">
+                                <rect key="frame" x="300" y="514" width="300" height="86"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEh-Jt-O7M">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
@@ -176,8 +176,8 @@
                                     <rect key="frame" x="200" y="345" width="200" height="55"/>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-uH-Uhj" userLabel="leftview">
-                                <rect key="frame" x="0.0" y="521" width="300" height="79"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-uH-Uhj" userLabel="leftview">
+                                <rect key="frame" x="0.0" y="514" width="300" height="86"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-Rw-wqd">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
@@ -285,7 +285,7 @@
                             <constraint firstAttribute="trailing" secondItem="POM-Cj-1hF" secondAttribute="trailing" id="ngK-y0-XX5"/>
                             <constraint firstItem="iLj-zL-hBw" firstAttribute="leading" secondItem="BGX-uH-Uhj" secondAttribute="trailing" id="rg2-BW-hQZ"/>
                             <constraint firstItem="UI3-Ff-t7j" firstAttribute="top" secondItem="966-9d-w3P" secondAttribute="bottom" id="vji-4O-B3V"/>
-                            <constraint firstItem="POM-Cj-1hF" firstAttribute="top" secondItem="UI3-Ff-t7j" secondAttribute="bottom" constant="1" id="ywi-iz-U17"/>
+                            <constraint firstItem="POM-Cj-1hF" firstAttribute="top" secondItem="UI3-Ff-t7j" secondAttribute="bottom" id="ywi-iz-U17"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ISN-V6-pN7"/>
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUb-Ec-C63" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="176"/>
+            <point key="canvasLocation" x="627" y="176"/>
         </scene>
     </scenes>
 </document>
