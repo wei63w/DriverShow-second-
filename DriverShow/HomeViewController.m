@@ -45,7 +45,7 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:1/255.0 alpha:1];
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
-    title.text = @"首页";
+    title.text = @"";
     title.textAlignment = NSTextAlignmentCenter;
     title.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = title;
@@ -171,7 +171,7 @@
 // 如果不想实现直接去掉此方法即可
 - (void)ScrollViewDidClickAtAnyImageView:(UIImageView *)imageView {
     
-    NSLog(@"%ld --  %@",imageView.tag, imageView.image);
+//    NSLog(@"%ld --  %@",imageView.tag, imageView.image);
 }
 
 //centerView Click

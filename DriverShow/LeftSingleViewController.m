@@ -80,7 +80,7 @@
     //44
     self.scrollView = [[HeadScrollView alloc] init];
     
-    self.scrollView.frame = CGRectMake(0,64, kDeviceWidth, 250 );
+    self.scrollView.frame = CGRectMake(0,64, kDeviceWidth, 230 );
     self.scrollView.images = imgArr;//self.startModel.result.banner;
     self.scrollView.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
     self.scrollView.pageControl.pageIndicatorTintColor = [UIColor grayColor];
