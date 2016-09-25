@@ -703,6 +703,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "MX超跑";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -740,6 +741,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "MX超跑";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
