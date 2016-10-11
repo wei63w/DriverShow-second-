@@ -16,7 +16,7 @@
 #import "LeftDetailViewController.h"
 #import "RightDetailViewController.h"
 #import "ThridModel.h"
-
+#import "UILabel+CustomLabel.h"
 
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 
@@ -128,7 +128,9 @@
      ];
     
     self.centerOneLab.text = self.startModel.result.oneename;
-    self.centerTwoLab.text = self.startModel.result.onecname;
+//    self.centerTwoLab.text = self.startModel.result.onecname;
+    [self.centerTwoLab setCustomerAttributeTest:self.startModel.result.onecname];
+    
     self.leftOneLab.text = self.startModel.result.secondename;
     self.leftTwoLab.text = self.startModel.result.secondcname;
     self.rightOneLab.text = self.startModel.result.thirdename;

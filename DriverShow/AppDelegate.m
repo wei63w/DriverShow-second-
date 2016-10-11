@@ -26,7 +26,7 @@
     
     [self setupdatemanager];
     
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -50,6 +50,8 @@
 }
 -(void)setLaunch{
     UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    [viewController preferredStatusBarStyle];
+    
     
     UIView *launchView = viewController.view;
     UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;

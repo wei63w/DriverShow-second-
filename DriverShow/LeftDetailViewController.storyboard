@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffD-0i-K6l" id="rSN-2r-OKk">
-                                            <frame key="frameInset" width="414" height="250"/>
+                                            <frame key="frameInset" width="414" height="249.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1nD-Um-GTF"/>
@@ -80,6 +80,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ASt-w3-1df"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="tableView" destination="aIl-SZ-CNY" id="xAi-sm-ITs"/>
                     </connections>

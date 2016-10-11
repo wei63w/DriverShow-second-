@@ -12,6 +12,7 @@
 		236D24EF1D8675E8000312BD /* LeftSingleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D24EE1D8675E8000312BD /* LeftSingleModel.m */; };
 		237986A21D6C621000509B39 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2379869F1D6C621000509B39 /* NetWorkTools.m */; };
 		237986A31D6C621000509B39 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 237986A11D6C621000509B39 /* NSString+Path.m */; };
+		2384520A1DAD096800E13765 /* UILabel+CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 238452091DAD096800E13765 /* UILabel+CustomLabel.m */; };
 		239F72EB1D6DB329001069B8 /* Starts.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F72EA1D6DB329001069B8 /* Starts.m */; };
 		23AC8DC81D70517400AB142F /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DC71D70517400AB142F /* DetailTableViewCell.m */; };
 		23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */; };
@@ -77,6 +78,8 @@
 		2379869F1D6C621000509B39 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
 		237986A01D6C621000509B39 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
 		237986A11D6C621000509B39 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		238452081DAD096800E13765 /* UILabel+CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CustomLabel.h"; sourceTree = "<group>"; };
+		238452091DAD096800E13765 /* UILabel+CustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CustomLabel.m"; sourceTree = "<group>"; };
 		239F72E91D6DB329001069B8 /* Starts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Starts.h; sourceTree = "<group>"; };
 		239F72EA1D6DB329001069B8 /* Starts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Starts.m; sourceTree = "<group>"; };
 		23AC8DC61D70517400AB142F /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				2379869F1D6C621000509B39 /* NetWorkTools.m */,
 				237986A01D6C621000509B39 /* NSString+Path.h */,
 				237986A11D6C621000509B39 /* NSString+Path.m */,
+				238452081DAD096800E13765 /* UILabel+CustomLabel.h */,
+				238452091DAD096800E13765 /* UILabel+CustomLabel.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 				23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */,
 				23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */,
 				986C59681D71D45100B58572 /* CustomButton.m in Sources */,
+				2384520A1DAD096800E13765 /* UILabel+CustomLabel.m in Sources */,
 				98BE80701D6C8E8B00CB7611 /* CenterDetailViewController.m in Sources */,
 				981737FB1D731F680099787D /* LastModel.m in Sources */,
 				986C59621D71A1D600B58572 /* DetailPageViewController.m in Sources */,
