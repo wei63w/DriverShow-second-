@@ -94,7 +94,7 @@
         if ([item isKindOfClass:[UILabel class]]) {
             UILabel *lab = (UILabel *)item;
             lab.textColor = [UIColor whiteColor];
-            lab.font = [UIFont systemFontOfSize:25];
+//            lab.font = [UIFont systemFontOfSize:25];
             
             if (b) {
                 lab.text = model.cname;

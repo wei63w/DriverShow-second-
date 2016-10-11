@@ -92,6 +92,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## PgyUpdate
+
+Copyright 2015 pgyer.com. All rights reserved.
+
+
+## Pgyer
+
+Copyright 2015 pgyer.com. All rights reserved.
+
+
 ## SDWebImage
 
 Copyright (c) 2016 Olivier Poitrey rs@dailymotion.com

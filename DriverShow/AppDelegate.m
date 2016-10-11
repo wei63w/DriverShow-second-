@@ -12,6 +12,7 @@
 #import "NetWorkTools.h"
 #import "Starts.h"
 #import "MJExtension.h"
+#import "PgyUpdate/PgyUpdateManager.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self setupdatemanager];
+    
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -43,8 +48,28 @@
     return YES;
     
 }
+-(void)setLaunch{
+    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    
+    UIView *launchView = viewController.view;
+    UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+    launchView.frame = [UIApplication sharedApplication].keyWindow.frame;
+    [mainWindow addSubview:launchView];
+    
+    [UIView animateWithDuration:0.6f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        launchView.alpha = 0.0f;
+        launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5f, 1.5f, 1.0f);
+    } completion:^(BOOL finished) {
+        [launchView removeFromSuperview];
+    }];
+}
 
-
+-(void)setupdatemanager{
+    
+    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"529eb1b209c5b88f8e58616696102bfe"];
+    [[PgyUpdateManager sharedPgyManager] checkUpdate];
+    
+}
 
 
 

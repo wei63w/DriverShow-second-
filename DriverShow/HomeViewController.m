@@ -42,6 +42,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setLaunch];
+    
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:1/255.0 alpha:1];
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
@@ -71,6 +74,31 @@
     
     
  
+}
+-(void)setLaunch{
+//    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    
+//    UIView *launchView = viewController.view;
+    UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+    
+//    launchView.frame = [UIApplication sharedApplication].keyWindow.frame;
+//    [mainWindow addSubview:launchView];
+    UIImageView *templaunch = [[UIImageView alloc]initWithFrame:mainWindow.frame];
+    templaunch.image = [UIImage imageNamed:@"Default"];
+    
+    [mainWindow addSubview:templaunch];
+    
+    
+    [UIView animateWithDuration:0.6f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//        launchView.alpha = 0.0f;
+//        launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5f, 1.5f, 1.0f);
+        templaunch.alpha = 0.0f;
+        templaunch.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5f, 1.5f, 1.0f);
+        
+    } completion:^(BOOL finished) {
+//        [launchView removeFromSuperview];
+        [templaunch removeFromSuperview];
+    }];
 }
 -(void)leftTouch{
     NSLog(@"嘿嘿嘿");
