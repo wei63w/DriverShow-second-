@@ -126,15 +126,16 @@
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                             }
      ];
-    
     self.centerOneLab.text = self.startModel.result.oneename;
-//    self.centerTwoLab.text = self.startModel.result.onecname;
+//    [self.centerOneLab setCustomerAttributeTest:self.startModel.result.oneename];
     [self.centerTwoLab setCustomerAttributeTest:self.startModel.result.onecname];
-    
+//    [self.leftOneLab setCustomerAttributeTest:self.startModel.result.secondename];
     self.leftOneLab.text = self.startModel.result.secondename;
-    self.leftTwoLab.text = self.startModel.result.secondcname;
+    [self.leftTwoLab setCustomerAttributeTest:self.startModel.result.secondcname];
+//    [self.rightOneLab setCustomerAttributeTest:self.startModel.result.thirdename];
     self.rightOneLab.text = self.startModel.result.thirdename;
-    self.rightTwoLab.text = self.startModel.result.thirdcname;
+    [self.rightTwoLab setCustomerAttributeTest:self.startModel.result.thirdcname];
+    
     
     [self.leftImg sd_setImageWithURL:[NSURL URLWithString:self.startModel.result.secondpic]
                       placeholderImage:[UIImage imageNamed:@"defaultPic"]

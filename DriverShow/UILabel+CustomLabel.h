@@ -11,5 +11,6 @@
 @interface UILabel (CustomLabel)
 
 -(void)setCustomerAttributeTest:(NSString *)str;
-
+-(void)setCustomerFontWithStr:(NSString *)str;
+-(void)setCustomerFontWithStr:(NSString *)str AndSize:(CGFloat)size;
 @end

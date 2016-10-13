@@ -15,9 +15,22 @@
     
     NSMutableAttributedString *subAttrStr = [[NSMutableAttributedString alloc] initWithString:str];
     
-    [subAttrStr addAttribute:NSKernAttributeName value:@(20.0) range:NSMakeRange(0, str.length)];
-    
+    [subAttrStr addAttribute:NSKernAttributeName value:@(5.0) range:NSMakeRange(0, str.length)];
+    //方正正粗黑简体  FZZhengHeiS-B-GB FZSongHei-B07S
+    self.font = [UIFont fontWithName:@"Hiragino Sans GB" size:self.font.pointSize];
     
     [self setAttributedText:subAttrStr];
+}
+
+-(void)setCustomerFontWithStr:(NSString *)str{
+    
+    self.text = str;
+    self.font = [UIFont fontWithName:@"Hiragino Sans GB" size:self.font.pointSize];
+}
+
+-(void)setCustomerFontWithStr:(NSString *)str AndSize:(CGFloat)size{
+    
+    self.text = str;
+    self.font = [UIFont fontWithName:@"Hiragino Sans GB" size:size];
 }
 @end

@@ -97,10 +97,12 @@
 //            lab.font = [UIFont systemFontOfSize:25];
             
             if (b) {
-                lab.text = model.cname;
+                [lab setCustomerFontWithStr:model.cname];
+//                lab.text = model.cname;
                 b = NO;
             }else{
-                lab.text = model.ename;
+                [lab setCustomerFontWithStr:model.ename];
+//                lab.text = model.ename;
             }
             
             

@@ -5,13 +5,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Hiragino Sans GB W6.otf">
+            <string>HiraginoSansGB-W6</string>
+        </array>
+        <array key="fzzchjt.ttf">
+            <string>FZZCHJW--GB1-0</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Driver Main View Controller-->
         <scene sceneID="fvP-Hi-zPK">
             <objects>
                 <navigationController id="s11-NR-w9p" customClass="DriverMainViewController" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xKJ-cz-oQ5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xKJ-cz-oQ5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -48,13 +56,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ljf-hg-obg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="FZZCHJW--GB1-0" family="FZZhengHeiS-B-GB" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7w-bG-fUD" userLabel="centerTwo">
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSansGB-W6" family="Hiragino Sans GB" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
