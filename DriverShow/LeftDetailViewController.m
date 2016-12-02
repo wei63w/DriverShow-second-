@@ -254,19 +254,20 @@
             }];
             
             CenterModel *centerModel = [CenterModel mj_objectWithKeyValues:responseObject];
+            if (isUpPull) {
+                self.tbData = [NSMutableArray arrayWithCapacity:5];
+                [self.tbData addObjectsFromArray:self.centerModel.result.car];
+                [self.tbData addObjectsFromArray:centerModel.result.car];
+                centerModel.result.car = self.tbData;
+            }
             
             if ([centerModel.status isEqualToString:@"-1"]) {
                 //没有更多数据了
                 [self.tableView.mj_footer setState:MJRefreshStateNoMoreData];
                 return;
             }else{
-                if (isUpPull) {
-                    [self.tbData addObjectsFromArray:self.centerModel.result.car];
-                    [self.tbData addObjectsFromArray:centerModel.result.car];
-                }else{
-                    self.centerModel = centerModel;
-                }
-                
+              
+                self.centerModel = centerModel;
                 self.page = page;
                 self.sort = sort;
                 self.brand = brand;
