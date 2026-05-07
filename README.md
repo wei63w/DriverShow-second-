@@ -12,6 +12,7 @@
 - `Podfile`
 - `Podfile.lock`
 - `Pods`
+- `README.md`
 
 ## 快速开始
 ```bash
