@@ -46,6 +46,8 @@
                           }
      ];
     
+//    [self.carName setCustomerFontWithStr:model.carName];
+//    [self.carPrice setCustomerFontWithStr:[NSString stringWithFormat:@"￥%@/日(按周)",model.money]];
     self.carName.text = model.carName;
     self.carPrice.text = [NSString stringWithFormat:@"￥%@/日(按周)",model.money];
 }

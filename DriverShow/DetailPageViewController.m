@@ -40,22 +40,32 @@
     title.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = title;
     
+    [self.name setCustomerFontWithStr:self.desModel.name AndSize:16];
+//    self.name.text = self.desModel.name;
+//    [self.name setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     
-    self.name.text = self.desModel.name;
-    [self.name setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
-    self.nameTitle.text = self.desModel.title;
-    [self.nameTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
+    [self.nameTitle setCustomerFontWithStr:self.desModel.title AndSize:16];
+//    self.nameTitle.text = self.desModel.title;
+//    [self.nameTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     
-    self.min_title.text = self.desModel.min_title;
-    [self.min_title setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
+    [self.min_title setCustomerFontWithStr:self.desModel.min_title AndSize:16];
+//    self.min_title.text = self.desModel.min_title;
+//    [self.min_title setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     
-    self.mid_title.text = self.desModel.mid_title;
-    [self.mid_title setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
+    [self.mid_title setCustomerFontWithStr:self.desModel.mid_title AndSize:16];
+//    self.mid_title.text = self.desModel.mid_title;
+//    [self.mid_title setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     
-    self.max_title.text = self.desModel.max_title;
-    [self.max_title setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
+    [self.max_title setCustomerFontWithStr:self.desModel.max_title AndSize:16];
+//    self.max_title.text = self.desModel.max_title;
+//    [self.max_title setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
+    
+//    [self.min_des setCustomerFontWithStr:self.desModel.min_des];
+//    [self.mid_des setCustomerFontWithStr:self.desModel.mid_des];
+//    [self.max_des setCustomerFontWithStr:self.desModel.max_des];
+    
     self.min_des.text = self.desModel.min_des;
-    self.mid_des.text = self.desModel.min_des;
+    self.mid_des.text = self.desModel.mid_des;
     self.max_des.text = self.desModel.max_des;
     self.max_des.numberOfLines = 0;
     [self setLeftBarButtonItem];

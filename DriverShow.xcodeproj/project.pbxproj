@@ -10,8 +10,13 @@
 		236D24EA1D865BAB000312BD /* LeftSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D24E91D865BAB000312BD /* LeftSingleViewController.m */; };
 		236D24EC1D865BB9000312BD /* LeftSingleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236D24EB1D865BB9000312BD /* LeftSingleViewController.storyboard */; };
 		236D24EF1D8675E8000312BD /* LeftSingleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D24EE1D8675E8000312BD /* LeftSingleModel.m */; };
+		236FD20B1DADDCAF00AF49A2 /* TTRuiHeiJ-W6.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 236FD20A1DADDCAF00AF49A2 /* TTRuiHeiJ-W6.ttf */; };
+		236FD20D1DADDD2500AF49A2 /* fzzchjt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 236FD20C1DADDD2500AF49A2 /* fzzchjt.ttf */; };
+		236FD2101DADE06000AF49A2 /* fzshj.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 236FD20F1DADE06000AF49A2 /* fzshj.ttf */; };
+		236FD2121DADE99000AF49A2 /* Hiragino Sans GB W6.otf in Resources */ = {isa = PBXBuildFile; fileRef = 236FD2111DADE99000AF49A2 /* Hiragino Sans GB W6.otf */; };
 		237986A21D6C621000509B39 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2379869F1D6C621000509B39 /* NetWorkTools.m */; };
 		237986A31D6C621000509B39 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 237986A11D6C621000509B39 /* NSString+Path.m */; };
+		2384520A1DAD096800E13765 /* UILabel+CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 238452091DAD096800E13765 /* UILabel+CustomLabel.m */; };
 		239F72EB1D6DB329001069B8 /* Starts.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F72EA1D6DB329001069B8 /* Starts.m */; };
 		23AC8DC81D70517400AB142F /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DC71D70517400AB142F /* DetailTableViewCell.m */; };
 		23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DCB1D7056DA00AB142F /* DetailCellModel.m */; };
@@ -73,10 +78,17 @@
 		236D24EB1D865BB9000312BD /* LeftSingleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeftSingleViewController.storyboard; sourceTree = "<group>"; };
 		236D24ED1D8675E8000312BD /* LeftSingleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSingleModel.h; sourceTree = "<group>"; };
 		236D24EE1D8675E8000312BD /* LeftSingleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSingleModel.m; sourceTree = "<group>"; };
+		236FD20A1DADDCAF00AF49A2 /* TTRuiHeiJ-W6.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTRuiHeiJ-W6.ttf"; sourceTree = "<group>"; };
+		236FD20C1DADDD2500AF49A2 /* fzzchjt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fzzchjt.ttf; sourceTree = "<group>"; };
+		236FD20F1DADE06000AF49A2 /* fzshj.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fzshj.ttf; sourceTree = "<group>"; };
+		236FD2111DADE99000AF49A2 /* Hiragino Sans GB W6.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hiragino Sans GB W6.otf"; sourceTree = "<group>"; };
+		236FD2151DAE0A3A00AF49A2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2379869E1D6C621000509B39 /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTools.h; sourceTree = "<group>"; };
 		2379869F1D6C621000509B39 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
 		237986A01D6C621000509B39 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
 		237986A11D6C621000509B39 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		238452081DAD096800E13765 /* UILabel+CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CustomLabel.h"; sourceTree = "<group>"; };
+		238452091DAD096800E13765 /* UILabel+CustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CustomLabel.m"; sourceTree = "<group>"; };
 		239F72E91D6DB329001069B8 /* Starts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Starts.h; sourceTree = "<group>"; };
 		239F72EA1D6DB329001069B8 /* Starts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Starts.m; sourceTree = "<group>"; };
 		23AC8DC61D70517400AB142F /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
@@ -184,6 +196,8 @@
 				2379869F1D6C621000509B39 /* NetWorkTools.m */,
 				237986A01D6C621000509B39 /* NSString+Path.h */,
 				237986A11D6C621000509B39 /* NSString+Path.m */,
+				238452081DAD096800E13765 /* UILabel+CustomLabel.h */,
+				238452091DAD096800E13765 /* UILabel+CustomLabel.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -307,8 +321,8 @@
 				23CD36E91D6AC01B00B4FDCE /* Main */,
 				981CEDB11D69D400000EC30D /* AppDelegate.h */,
 				981CEDB21D69D400000EC30D /* AppDelegate.m */,
+				236FD2151DAE0A3A00AF49A2 /* PrefixHeader.pch */,
 				981CEDBA1D69D400000EC30D /* Assets.xcassets */,
-				981CEDBF1D69D400000EC30D /* Info.plist */,
 				981CEDAE1D69D400000EC30D /* Supporting Files */,
 			);
 			path = DriverShow;
@@ -317,6 +331,11 @@
 		981CEDAE1D69D400000EC30D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				236FD20A1DADDCAF00AF49A2 /* TTRuiHeiJ-W6.ttf */,
+				236FD20F1DADE06000AF49A2 /* fzshj.ttf */,
+				236FD2111DADE99000AF49A2 /* Hiragino Sans GB W6.otf */,
+				236FD20C1DADDD2500AF49A2 /* fzzchjt.ttf */,
+				981CEDBF1D69D400000EC30D /* Info.plist */,
 				981CEDAF1D69D400000EC30D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -504,6 +523,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236FD20B1DADDCAF00AF49A2 /* TTRuiHeiJ-W6.ttf in Resources */,
 				981738011D73289C0099787D /* SinglePageViewController.storyboard in Resources */,
 				23CD37051D6AD06300B4FDCE /* car4.jpg in Resources */,
 				23CD37031D6AD06300B4FDCE /* car2.jpg in Resources */,
@@ -513,9 +533,12 @@
 				981CEDBB1D69D400000EC30D /* Assets.xcassets in Resources */,
 				986C595F1D719C8400B58572 /* DetailPage.storyboard in Resources */,
 				98BE806D1D6C8E6100CB7611 /* CenterDetail.storyboard in Resources */,
+				236FD2121DADE99000AF49A2 /* Hiragino Sans GB W6.otf in Resources */,
 				23CD37041D6AD06300B4FDCE /* car3.jpg in Resources */,
 				986C595C1D71825800B58572 /* RightDetailViewController.storyboard in Resources */,
+				236FD20D1DADDD2500AF49A2 /* fzzchjt.ttf in Resources */,
 				236D24EC1D865BB9000312BD /* LeftSingleViewController.storyboard in Resources */,
+				236FD2101DADE06000AF49A2 /* fzshj.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +631,7 @@
 				23AC8DCC1D7056DA00AB142F /* DetailCellModel.m in Sources */,
 				23CD36F11D6AC19A00B4FDCE /* HomeViewController.m in Sources */,
 				986C59681D71D45100B58572 /* CustomButton.m in Sources */,
+				2384520A1DAD096800E13765 /* UILabel+CustomLabel.m in Sources */,
 				98BE80701D6C8E8B00CB7611 /* CenterDetailViewController.m in Sources */,
 				981737FB1D731F680099787D /* LastModel.m in Sources */,
 				986C59621D71A1D600B58572 /* DetailPageViewController.m in Sources */,
@@ -740,6 +764,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DriverShow/PrefixHeader.pch;
 				INFOPLIST_FILE = DriverShow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -758,6 +784,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DriverShow/PrefixHeader.pch;
 				INFOPLIST_FILE = DriverShow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

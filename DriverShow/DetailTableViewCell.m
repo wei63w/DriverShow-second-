@@ -31,6 +31,9 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *toWay;
 
+//黄色的分隔条
+@property (weak, nonatomic) IBOutlet UIView *yellowSplite;
+
 @end
 @implementation DetailTableViewCell
 
@@ -38,9 +41,17 @@
     [super awakeFromNib];
     // Initialization code
     
+//        UIVisualEffectView *visualEffect = [[UIVisualEffectView alloc]initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+//        visualEffect.frame = self.frame;
+//        visualEffect.alpha = 0.3;
+//        [self.rightView addSubview:visualEffect];
+//    self.rightView.alpha = 0.6;//0.7;
     
-//    self.rightView.alpha = 0.7;
-    [self.rightView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7]];
+//    [self.yellowSplite setBackgroundColor:[UIColor colorWithRed:131/255.0 green:106/255.0 blue:62/255.0 alpha:0.8]];
+//    self.carName.textColor = [UIColor colorWithRed:131/255.0 green:106/255.0 blue:62/255.0 alpha:0.5];
+//    [self.carName setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
+    
+    [self.rightView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4]];
     self.money.textColor = [UIColor whiteColor];
     self.toWay.textColor =[UIColor whiteColor];
     
@@ -76,8 +87,15 @@
                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                         }
      ];
+    [self.carName setCustomerFontWithStr:model.carName];
+//    self.carName.text = model.carName;
     
-    self.carName.text = model.carName;
+//    UIVisualEffectView *visualEffect = [[UIVisualEffectView alloc]initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+//    visualEffect.frame = self.frame;
+//    visualEffect.alpha = 0.9;
+//    [self addSubview:visualEffect];
+    
+    
     self.money.text = [NSString stringWithFormat:@"￥%@/日(按周)",model.money];
     self.toWay.text = model.toWay;
 }
